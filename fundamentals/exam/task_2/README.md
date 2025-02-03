@@ -2,13 +2,13 @@
 This C++ program generates an n × n matrix, filling it in a specific pattern using prime numbers, and writes the result to an output file. The program reads the matrix size from an input file and ensures that the matrix size is within a valid range.
 
 ## Functionality
-1. Reads an integer n (matrix size) from input.txt.
-2. Validates that n is between 3 and 100.
-3. Creates an n × n matrix initialized with zeros in the upper triangular part.
+1. Reads an integer `n` (matrix size) from `input.txt`.
+2. Validates that `n` is between 3 and 100.
+3. Creates an `n` × `n` matrix initialized with zeros in the upper triangular part.
 4. Fills the lower triangular part in a zigzag pattern using consecutive prime numbers:
-5. Alternates between column-wise and row-wise filling.
-6. Uses prostoe() function to generate prime numbers sequentially.
-7. Writes the resulting matrix to output.txt.
+- Alternates between column-wise and row-wise filling.
+- Uses `prostoe()` function to generate prime numbers sequentially.
+- Writes the resulting matrix to `output.txt`.
 
 ## Error Handling
 - Checks if input.txt or output.txt fails to open.
