@@ -1,2 +1,3 @@
 # BSU
-This repository is for labs on various subjects at the Belarusian State University.
+## Subjects studied at BSU
+1. Fundamentals and Methodologies of Programming
