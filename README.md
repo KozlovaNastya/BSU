@@ -4,7 +4,7 @@ This repository is for labs on various subjects at the Belarusian State Universi
 ---
 
 ### Subjects
-- [Fundamentals and Methodologies of Programming](https://github.com/KozlovaNastya/BSU/tree/main/fundamentals_and_methodologies_of_programming) - `C++`
+- [Fundamentals and Methodologies of Programming](https://github.com/KozlovaNastya/BSU/tree/main/fundamentals) - `C++`
 
 ---
 
@@ -12,7 +12,7 @@ This repository is for labs on various subjects at the Belarusian State Universi
 <details>
 <summary>semester 1</summary>
   
-- [Fundamentals and Methodologies of Programming](https://github.com/KozlovaNastya/BSU/tree/main/fundamentals_and_methodologies_of_programming)
+- [Fundamentals and Methodologies of Programming](https://github.com/KozlovaNastya/BSU/tree/main/fundamentals)
 </details>
 
 ---
