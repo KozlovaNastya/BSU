@@ -11,9 +11,9 @@ This C++ program generates an n × n matrix, filling it in a specific pattern us
 - Writes the resulting matrix to `output.txt`.
 
 ## Error Handling
-- Checks if input.txt or output.txt fails to open.
+- Checks if `input.txt` or `output.txt` fails to open.
 - Ensures the input file is not empty.
-- Validates that n is within the correct range (3 ≤ n ≤ 100).
+- Validates that `n` is within the correct range (3 ≤ n ≤ 100).
 
 ## Example Input (input.txt)
 5
