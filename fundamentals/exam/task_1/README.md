@@ -16,7 +16,7 @@ This C++ program reads input from a file, generates random numbers within a give
 ## Example input (input.txt)
 5
 
-10 10
+10 50
 
 ## Example output (output.txt)
 23 41 12 35 47
