@@ -7,11 +7,11 @@ int main() {
 	setlocale(LC_ALL, ".1251");
 	vector<int> numbers;
 	int n = 5, a, sum = 0, count = 0, N, count1 = 0, count2 = 0, minValue, maxValue, razn;
-	cout << "Введите элементы массива (завершите ввод числом 0):" << endl;
+	cout << "Enter the elements of the array (end the input with the number 0):" << endl;
 	while (cin >> a && a != 0) {
 		numbers.push_back(a);
 	}
-	cout << "Введите число с которым будем сравнивать: ";
+	cout << "Enter the number to compare with: ";
 	cin >> N;
 	maxValue = numbers[0];
 	minValue = numbers[0];
@@ -35,10 +35,10 @@ int main() {
 				numbers[i] = srznach;
 		}
 	}
-	cout << "Сумма чисел: " << sum << endl << "Количество чисел: " << count << endl;
-	cout << "Количество чисел равных " << N << " равно " << count1 << endl;
-	cout << "Количество чисел больших чем " << N << " равно " << count2 << endl;
-	cout << "Заменить все нули средним арифметическим:" << endl;
+	cout << "Sum of the numbers: " << sum << endl << "Number of elements: " << count << endl;
+	cout << "Count of numbers equal to " << N << " = " << count1 << endl;
+	cout << "Count of numbers greater than " << N << " = " << count2 << endl;
+	cout << "Replace all elements with the arithmetic mean:" << endl;
 	for (int num : numbers)
 		cout << num << ' ';
 	int k = 1;
@@ -49,14 +49,14 @@ int main() {
 		}
 		numbers[i] += sum;
 	}
-	cout << endl << "Добавить к каждому элементу вектора сумму всех чисел из заданного интервала (пусть k=1):" << endl;
+	cout << endl << "Add to each element in the vector the sum of all numbers from neighboring intervals (parameter k=1):" << endl;
 	for (int num : numbers)
 		cout << num << ' ';
 	for (int i = 0; i < count; i++) {
 		if (abs(numbers[i])%2 == 0)
 			numbers[i] = razn;
 	}
-	cout << endl << "Заменить все числа, модуль которых есть четное число:" << endl;
+	cout << endl << "Replace all numbers where the number is even:" << endl;
 	for (int num : numbers)
 		cout << num << ' ';
 	for (int i = 0; i < numbers.size(); i++) {
@@ -66,7 +66,7 @@ int main() {
 			else j++;
 		}
 	}
-	cout << endl << "Удалить из последовательности все равные по модулю числа, кроме первого из них:" << endl;
+	cout << endl << "Remove all duplicates from the sequence in increasing order, except the first one:" << endl;
 	for (int num : numbers)
 		cout << num << ' ';
 	return 0;
