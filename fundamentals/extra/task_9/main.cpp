@@ -12,10 +12,10 @@ bool Pal(int a) {
 int main() {
 	setlocale(LC_ALL, ".1251");
 	int a, b;
-	cout << "Введите число" << endl;
+	cout << "Enter a number" << endl;
 	cin >> a;
 	if (Pal(a) && Pal(a * a))
-		cout << "Число двойной палиндром";
-	else cout << "нет";
+		cout << "Double palindrome number";
+	else cout << "no";
 	return 0;
 }
