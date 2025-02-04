@@ -27,15 +27,15 @@ int main() {
     SetConsoleOutputCP(1251);
     string text, letter, replace;
     string result = "";
-    //Ввод данных
-    cout << "Введите строку: ";
+    //Data entry
+    cout << "Enter string: ";
     getline(cin, text);
-    cout << "Введите букву для замены: ";
+    cout << "Enter letter to replace: ";
     getline(cin, letter);
-    cout << "Введите слово для замены: ";
+    cout << "Enter a replacement word: ";
     getline(cin, replace);
     int n = text.length();
-    //Выполняем замену
+    //Carry out replacement
     for (int i = 0; i < n; i++) {
         if (text[i] == letter[0]) {
             if (checkAlone(text, i, n))
@@ -46,7 +46,7 @@ int main() {
             result += text[i];
         }
     }
-    //Вывод результата
-    cout << "Результат: " << result << endl;
+    //Output of the result
+    cout << "Result: " << result << endl;
     return 0;
 }
