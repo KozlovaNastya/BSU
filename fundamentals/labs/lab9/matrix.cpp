@@ -1,5 +1,4 @@
 #include "matrix.h"
-// Вспомогательная функция для выделения памяти
 void matrix::allocateMemory() {
 	p = new double* [m];
 	for (int i = 0; i < m; ++i) {
@@ -7,7 +6,6 @@ void matrix::allocateMemory() {
 	}
 }
 
-// Вспомогательная функция для копирования значений
 void matrix::copyValues(const matrix& other) {
 	for (int i = 0; i < m; ++i) {
 		for (int j = 0; j < n; ++j) {
@@ -16,7 +14,6 @@ void matrix::copyValues(const matrix& other) {
 	}
 }
 
-// Вспомогательная функция для освобождения памяти
 void matrix::deallocateMemory() {
 	for (int i = 0; i < m; ++i) {
 		delete[] p[i];
