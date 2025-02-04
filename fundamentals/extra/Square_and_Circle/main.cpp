@@ -3,12 +3,12 @@ using namespace std;
 int main() {
 	setlocale(LC_ALL, ".1251");
 	int a, r;
-	cout << "Введите сторону квадрата\n";
+	cout << "Enter the side of the square\n";
 	cin >> a;
-	cout << "Введите радиус окружности\n";
+	cout << "Enter the radius of the circle\n";
 	cin >> r;
 	if (a <= r * sqrt(2))
-		cout << "Можно поместить";
-	else cout << "Нельзя поместить";
+		cout << "Possible";
+	else cout << "Impossible";
 	return 0;
 }
