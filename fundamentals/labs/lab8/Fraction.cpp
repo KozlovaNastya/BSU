@@ -8,7 +8,7 @@ const char* DivByZeroException::what() const noexcept {
 }
 Fraction::Fraction(int n, int d) : n(n), d(d), ID{ countID++ } {
 	if (d == 0)
-		throw DivByZeroException("Ошибка деление на ноль!");
+		throw DivByZeroException("Divide by 0 error!");
 	simplify();
 }
 int Fraction::nod(int a, int b) {
@@ -38,29 +38,24 @@ int Fraction::getDenom() const { return d; }
 void Fraction::setNum(int nn) { n = nn; };
 void Fraction::setDenom(int dd) { d = dd; };
 
-//Унарный минус
 Fraction Fraction::operator - () const {
 	return Fraction(-n, d);
 }
 
-//Обратная дробь
 Fraction Fraction::operator !() const {
 	return Fraction(d, n);
 }
 
-//Префиксный инкремент
 Fraction Fraction::operator ++ () {
 	return Fraction(n + d, d);
 }
 
-//Постфиксный инкремент
 Fraction Fraction::operator ++ (int) {
 	Fraction temp = *this;
 	n += d;
 	return temp;
 }
 
-//Оператор присваивания
 Fraction& Fraction::operator = (const Fraction& other) {
 	if (this != &other) {
 		n = other.n;
@@ -69,7 +64,6 @@ Fraction& Fraction::operator = (const Fraction& other) {
 	return *this;
 }
 
-//Составные операторы присваивания
 Fraction& Fraction::operator += (const Fraction& other) {
 	if (this != &other) {
 		n = n * other.d + d * other.n;
@@ -84,6 +78,7 @@ Fraction& Fraction::operator -= (const Fraction& other) {
 	}
 	return *this;
 }
+
 Fraction& Fraction::operator *= (const Fraction& other) {
 	if (this != &other) {
 		n = n * other.n;
@@ -93,14 +88,13 @@ Fraction& Fraction::operator *= (const Fraction& other) {
 }
 Fraction& Fraction::operator /= (const Fraction& other) {
 	if (this != &other && other.n == 0) {
-		throw DivByZeroException("Ошибка деление на ноль!");
+		throw DivByZeroException("Divide by 0 error!");
 	}
 		n = n * other.d;
 		d = d * other.n;
 	return *this;
 }
 
-//Составные операторы присваивания c числом
 Fraction& Fraction::operator += (int other) {
 	n = n + d * other;
 	d = d;
@@ -122,7 +116,6 @@ Fraction& Fraction::operator /= (int other) {
 	return *this;
 }
 
-//Сложение с числом справа
 Fraction Fraction::operator + (int other) const {
 	return Fraction(n + d * other, d);
 }
@@ -136,7 +129,6 @@ Fraction Fraction::operator / (int other) const {
 	return Fraction(n, d * other);
 }
 
-//сложение с числом слева
 Fraction operator+ (int number, const Fraction& other) {
 	return Fraction(number * other.d + other.n, other.d);
 }
@@ -150,7 +142,6 @@ Fraction operator/ (int number, const Fraction& other) {
 	return Fraction(number * other.d, other.n);
 }
 
-//Бинарные операции
 Fraction Fraction::operator+ (const Fraction& other) const {
 	return Fraction(n * other.d + other.n * d, d * other.d);
 }
@@ -162,12 +153,11 @@ Fraction Fraction::operator* (const Fraction& other) const {
 }
 Fraction Fraction::operator/ (const Fraction& other) const {
 	if (other.n == 0) {
-		throw DivByZeroException("Ошибка деление на ноль!");
+		throw DivByZeroException("Divide by 0 error!");
 	}
 	return Fraction(n * other.d, d * other.n);
 }
 
-//Сравнение
 bool Fraction::operator == (const Fraction& other) const {
 	return (n * other.d == other.n * d);
 }
@@ -184,17 +174,16 @@ bool Fraction::operator > (const Fraction& other) const {
 	return (n * other.d > other.n * d);
 }
 
-//Превращение обыкновенной дроби в десятичную
 Fraction::operator double() {
 	return double(n) / d;
 }
 double Fraction::value() const {
 	return static_cast<double>(n) / d;
 }
-//Перегрузка оператора вывода
+
 ostream& operator << (ostream& so, const Fraction& other) {
 	if (other.getDenom() == 0)
-		so << "Ошибка: деление на ноль!" << endl;
+		so << "Divide by 0 error!" << endl;
 	else if (other.getNum() == 0)
 		so << 0 << endl;
 	else if (other.getNum() == other.getDenom())
@@ -206,13 +195,12 @@ ostream& operator << (ostream& so, const Fraction& other) {
 	return so;
 }
 
-//Перегрузка оператора ввода
 istream& operator >> (istream& is, Fraction& other) {
 	char del;
 	int n, d;
 	is >> n >> del >> d;
 	if (d == 0) {
-		cerr << "Ошибка деление на ноль!!! Будет присвоено d = 1 для корректой работы" << endl;
+		cerr << "The denominator cannot be zero. d=1 will be assigned for correct operation of the program." << endl;
 		d = 1;
 	}
 	other.n = n;
