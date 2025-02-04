@@ -54,7 +54,7 @@ int main()
     createStack(stack, 40);
     string str, subs, subst, sf;
     int op;
-    cout << "Введите выражение:" << endl;
+    cout << "Enter an expression:" << endl;
     getline(cin, str);
     int pos1 = 0, pos2;
     while ((pos1 = str.find_first_not_of(" ", pos1)) != -1) {
