@@ -142,14 +142,14 @@ void ListOfFlowers::Clone(const ListOfFlowers& other) {
 void ListOfFlowers::ForEach(void (ListOfFlowers::* callback)(const ListItem&) const) const {
 	ListItem* current = First;
 	while (current) {
-		(this->*callback)(*current);  // Используем указатель на метод с квалификатором const
+		(this->*callback)(*current);
 		current = current->Next;
 	}
 }
 void ListOfFlowers::ForEach(void (ListOfFlowers::* callback)(ListItem&)) {
 	ListItem* current = First;
 	while (current != nullptr) {
-		(this->*callback)(*current);  // Правильный вызов указателя на метод
+		(this->*callback)(*current);
 		current = current->Next;
 	}
 }
