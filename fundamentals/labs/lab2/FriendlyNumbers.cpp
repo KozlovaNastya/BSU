@@ -5,7 +5,7 @@ int main() {
 	int N;
 	int s1, s2, a, b;
 	int count = 0;
-	cout << "Введите предел" << endl;
+	cout << "Enter a limit" << endl;
 	cin >> N;
 	for (int i = 1; i < N; i++) {
 		s1 = 0;
@@ -19,11 +19,11 @@ int main() {
 				s2 = s2 + b;
 		}
 		if (s1 > i && s2 == i && s1 != i) {
-			cout << "Числа " << s2 << " и " << s1 << " дружественные" << endl;
+			cout << "Numbers " << s2 << " and " << s1 << " are friendly" << endl;
 			count++;
 		}
 	}
 	if(count == 0)
-		cout << "В заданном диапазоне нет дружественных чисел" << endl;
+		cout << "There are no friendly numbers in the given range" << endl;
 	return 0;
 }
