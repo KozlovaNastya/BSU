@@ -1,23 +1,24 @@
 # Friendly Numbers
-This project solves the problem of finding friendly numbers in a given range from 0 to the number entered by the user. Friendly numbers are numbers for which the sum of divisors of one number equals another number, and the sum of divisors of the second number equals the first number.
 
-### Example:
-The numbers 220 and 284 are friendly numbers because:
-- The sum of divisors of 220 (excluding 220) equals 284.
-- The sum of divisors of 284 (excluding 284) equals 220.
+## Program Description
+This C++ program finds and displays amicable numbers (friendly numbers) within a given limit. Amicable numbers are two different numbers where the sum of the proper divisors of each number equals the other.
 
-### Program Description
-The program finds all pairs of friendly numbers in the range from 0 to the number entered by the user.
+## Functionality
+1. The user inputs an integer `N` (upper limit).
+2. The program iterates through numbers from `1` to `N-1`:
+- Computes sum of divisors (`s1`) for `i`.
+- Computes sum of divisors (`s2`) for `s1`.
+3. Checks if `s1` and `s2` form an amicable pair.
+4. Displays all found amicable pairs.
+5. If no pairs are found, it prints "`There are no friendly numbers in the given range`".
 
-### Algorithm:
-- For each number in the range from 1 to N, find its divisors.
-- For each number, calculate the sum of its divisors.
-- Check if two numbers are friendly: if the sum of divisors of one number equals the other number and vice versa.
+## Error Handling
+- No direct error handling for invalid input (e.g., non-numeric values).
+- Ensures that `s1` > `i` to avoid duplicates and redundant checks.
 
-### How to Use
-1. Clone the repository or download the project files to your computer.
+## Example Input
+Enter a limit  
+300  
 
-2. Open a terminal and navigate to the project folder.
-
-3. Run the program by typing
-4. The program will prompt you to enter the maximum number to search for friendly numbers. Enter the number and receive all pairs of friendly numbers in that range.
+## Example Output
+Numbers 220 and 284 are friendly  
