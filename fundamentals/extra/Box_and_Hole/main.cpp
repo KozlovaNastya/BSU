@@ -3,15 +3,15 @@ using namespace std;
 int main() {
 	setlocale(LC_ALL, ".1251");
 	int a, b, c, x, y;
-	cout << "Введите ширину коробки" << endl;
+	cout << "Enter box width" << endl;
 	cin >> a;
-	cout << "Введите длинну коробки" << endl;
+	cout << "Enter box length" << endl;
 	cin >> b;
-	cout << "Введите высоту коробки" << endl;
+	cout << "Enter box height" << endl;
 	cin >> c;
-	cout << "Введите длинну отверстия" << endl;
+	cout << "Enter hole length" << endl;
 	cin >> x;
-	cout << "Введите ширину отверстия" << endl;
+	cout << "Enter hole width" << endl;
 	cin >> y;
 	if (a < x && b < y ||
 		a < x && c < y || 
@@ -19,7 +19,7 @@ int main() {
 		b < x && c < y || 
 		c < x && a < y || 
 		c < x && b < y)
-		cout << "Можно";
-	else cout << "Нельзя";
+		cout << "Possible";
+	else cout << "Impossible";
 	return 0;
 }
