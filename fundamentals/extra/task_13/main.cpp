@@ -7,88 +7,88 @@
 #include <ctime>
 #include <cstdlib>
 
-// Структура для хранения данных вопроса
-struct Voprosi {
-    std::string textVoprosov;  // Строка с текстом вопроса
-    std::vector<std::string> otveti;  // Вектор строк с вариантами ответов 
-    int indexPravOtv;  // Индекс правильного ответа
+// Structure to store question data
+struct Questions {
+    std::string questionText;  // String with the text of the question
+    std::vector<std::string> answers;  // Vector of answer options 
+    int correctAnswerIndex;  // Index of the correct answer
 };
 
-std::vector<Voprosi> ZagruzkaVoprosov() {
-    // Функция, в которой вопросы записываются в вектор
-    std::vector<Voprosi> questions;
-    std::ifstream test("test.txt");  // Открываем файл test.txt
+std::vector<Questions> LoadQuestions() {
+    // Function where questions are loaded into the vector
+    std::vector<Questions> questions;
+    std::ifstream test("test.txt");  // Open the file test.txt
 
     if (!test.is_open()) {
-        std::cerr << "Ошибка: не удалось открыть файл test.txt" << std::endl;
-        return questions; // Если файл не открылся, вернет пустой вектор
+        std::cerr << "Error: could not open file test.txt" << std::endl;
+        return questions; // If the file didn't open, return an empty vector
     }
 
     std::string line;
-    while (std::getline(test, line)) { // Поточное считывание файла
-        if (line.empty()) continue;  // Пропускаем пустые строки
+    while (std::getline(test, line)) { // Stream read from the file
+        if (line.empty()) continue;  // Skip empty lines
 
-        Voprosi question; // Экземпляр нашей структуры
-        question.textVoprosov = line;  // Инициализируем поле структуры
+        Questions question; // Instance of our structure
+        question.questionText = line;  // Initialize the field of the structure
 
-        // Чтение вариантов ответа до тех пор, пока не встретим цифру, подразумевается, что цифра - индекс ответа
+        // Read answer options until a number is encountered, it is assumed that the number is the answer index
         while (std::getline(test, line) && line[0] != '0' && line[0] != '1' && line[0] != '2') {
-            question.otveti.push_back(line.substr(0, line.size() - 1)); // Убираем последний ';'
+            question.answers.push_back(line.substr(0, line.size() - 1)); // Remove the last ';'
         }
 
-        // Считываем индекс правильного ответа
-        question.indexPravOtv = std::stoi(line); // Преобразуем в индекс (string to int)
+        // Read the index of the correct answer
+        question.correctAnswerIndex = std::stoi(line); // Convert to index (string to int)
 
-        questions.push_back(question);  // Добавляем вопрос в вектор вопросов
+        questions.push_back(question);  // Add the question to the vector of questions
     }
 
-    test.close();  // Закрываем файл
+    test.close();  // Close the file
     return questions;
 }
 
-bool zadatVopros(const Voprosi& question) {
-    std::cout << question.textVoprosov << "\n"; // Выводим текст вопроса на экран
-    for (size_t i = 0; i < question.otveti.size(); ++i) {  // Выводим по порядку все наши вопросы
-        std::cout << question.otveti[i] << "\n";
+bool askQuestion(const Questions& question) {
+    std::cout << question.questionText << "\n"; // Display the question text on the screen
+    for (size_t i = 0; i < question.answers.size(); ++i) {  // Display all our answers in order
+        std::cout << question.answers[i] << "\n";
     }
 
-    int Otvet;
-    std::cout << "Ваш ответ (введите номер варианта по порядку): ";
-    std::cin >> Otvet;
-    // Проверка корректности ввода
-    return (Otvet - 1) == question.indexPravOtv;
+    int answer;
+    std::cout << "Your answer (enter the option number in order): ";
+    std::cin >> answer;
+    // Check for valid input
+    return (answer - 1) == question.correctAnswerIndex;
 }
 
-// Функция для выставления итоговой оценки с параметрами в виде правильных ответов и количества вопросов
-void otobrazItog(int correctAnswers, int totalQuestions) {
-    double score = (static_cast<double>(correctAnswers) / totalQuestions) * 10; // Преобразовали correctAnswers в double
-    std::cout << "Вы ответили правильно на " << correctAnswers << " из " << totalQuestions << " вопросов.\n";
-    std::cout << "Ваша оценка: " << score << "\n";
+// Function to display the final grade based on the number of correct answers and total questions
+void displayResult(int correctAnswers, int totalQuestions) {
+    double score = (static_cast<double>(correctAnswers) / totalQuestions) * 10; // Convert correctAnswers to double
+    std::cout << "You answered correctly " << correctAnswers << " out of " << totalQuestions << " questions.\n";
+    std::cout << "Your score: " << score << "\n";
 }
 
 int main() {
-    std::srand(static_cast<unsigned int>(std::time(0))); // Для генерации рандома
-    // Загрузка вопросов из файла в вектор
-    std::vector<Voprosi> questions = ZagruzkaVoprosov();
+    std::srand(static_cast<unsigned int>(std::time(0))); // For generating random numbers
+    // Load questions from the file into the vector
+    std::vector<Questions> questions = LoadQuestions();
 
-    std::random_shuffle(questions.begin(), questions.end());  // Перемешивание вопросов
+    std::random_shuffle(questions.begin(), questions.end());  // Shuffle the questions
 
     int correctAnswers = 0;
 
-    // Задаем 10 из 26 вопросов пользователю
+    // Ask 10 questions out of 26 to the user
     for (int i = 0; i < 10; ++i) {
-        std::cout << "\nВопрос " << (i + 1) << ":\n";
-        if (zadatVopros(questions[i])) {
-            std::cout << "Правильно!\n";
+        std::cout << "\nQuestion " << (i + 1) << ":\n";
+        if (askQuestion(questions[i])) {
+            std::cout << "Correct!\n";
             ++correctAnswers;
         }
         else {
-            std::cout << "Неправильно!\n";
+            std::cout << "Incorrect!\n";
         }
     }
 
-    // Вывод итоговой оценки
-    otobrazItog(correctAnswers, 10);
+    // Display the final grade
+    displayResult(correctAnswers, 10);
 
     return 0;
 }
