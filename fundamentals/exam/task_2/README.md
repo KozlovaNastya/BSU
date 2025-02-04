@@ -4,7 +4,7 @@ This C++ program generates a n × n matrix, filling it in a specific pattern usi
 ## Functionality
 1. Reads an integer `n` (matrix size) from `input.txt`.
 2. Validates that `n` is between 3 and 100.
-3. Creates an `n` × `n` matrix initialized with zeros in the upper triangular part.
+3. Creates a `n` × `n` matrix initialized with zeros in the upper triangular part.
 4. Fills the lower triangular part in a zigzag pattern using consecutive prime numbers:
 - Alternates between column-wise and row-wise filling.
 - Uses `prostoe()` function to generate prime numbers sequentially.
