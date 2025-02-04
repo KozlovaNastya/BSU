@@ -3,7 +3,7 @@ using namespace std;
 int main() {
 	setlocale(LC_ALL, ".1251");
 	int f2, f1, f, i, n;
-	cout << "¬ведите число повторений\n";
+	cout << "Enter the number of repetitions\n";
 	cin >> n;
 	f = 1;
 	f1 = f;
