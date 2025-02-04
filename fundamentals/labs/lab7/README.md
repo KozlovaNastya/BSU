@@ -52,5 +52,5 @@ Enter the operation sign:
 +
 
 ## Example Output
-Add: 
+Add:  
 4+6i
