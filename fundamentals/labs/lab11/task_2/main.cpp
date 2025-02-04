@@ -16,11 +16,11 @@ int main() {
     setlocale(LC_ALL, ".1251");
     ifstream inputFile("Students.txt");
     if (!inputFile) {
-        cerr << "Не удалось открыть файл Students.txt" << endl;
+        cerr << "Students.txt was not opened" << endl;
         return 1;
     }
     if (inputFile.peek() == EOF) {
-        cerr << "Файл Student.txt пуст" << endl;
+        cerr << "Student.txt is empty" << endl;
         return 1;
     }
     vector<Student> students;
