@@ -3,14 +3,12 @@ using namespace std;
 
 class ComplexNumbers {
 private:
-    double real;  // Действительная часть
-    double img;  // Мнимая часть
+    double real;
+    double img;
 
 public:
-    // Конструктор по умолчанию
     ComplexNumbers(double r = 0, double i = 0) : real(r), img(i) {}
 
-    // Геттеры и сеттеры
     double getReal() const { 
         return real; 
     }
@@ -24,7 +22,6 @@ public:
         img = i; 
     }
 
-    // Перегрузка операторов
     ComplexNumbers operator+(const ComplexNumbers& other) const {
         return ComplexNumbers(real + other.real, img + other.img);
     }
@@ -38,18 +35,16 @@ public:
             real * other.img + img * other.real);
     }
 
-    // Проверка деления на 0
     ComplexNumbers operator/(const ComplexNumbers& other) const {
         if (other.real == 0 && other.img == 0) {
             cout << "Ошибка: деление на 0!" << endl;
-            return ComplexNumbers();  // Возвращаем нулевое комплексное число
+            return ComplexNumbers(); 
         }
         double denominator = other.real * other.real + other.img * other.img;
         return ComplexNumbers((real * other.real + img * other.img) / denominator,
             (img * other.real - real * other.img) / denominator);
     }
 
-    // Функция для вывода комплексного числа
     void print() const {
         if (img >= 0)
             cout << real << "+" << img << "i" << endl;
@@ -62,11 +57,11 @@ int main() {
     setlocale(LC_ALL, ".1251");
     double real1, img1, real2, img2;
     char operation;
-    cout << "Введите действительную и мнимую часть первого комплексного числа:" << endl;
+    cout << "Enter the real and imaginary part of the first complex number:" << endl;
     cin >> real1 >> img1;
-    cout << "Введите действительную и мнимую часть второго комплексного числа:" << endl;
+    cout << "Enter the real and imaginary part of the second complex number:" << endl;
     cin >> real2 >> img2;
-    cout << "Введите знак операции:" << endl;
+    cout << "Enter the operation sign:" << endl;
     cin >> operation;
 
     ComplexNumbers num1(real1, img1);
@@ -77,26 +72,26 @@ int main() {
     {
     case '+':
         result = num1 + num2;
-        cout << "Сумма:" << endl;
+        cout << "Add:" << endl;
         result.print();
         break;
     case '-':
         result = num1 - num2;
-        cout << "Разность:" << endl;
+        cout << "Subtract:" << endl;
         result.print();
         break;
     case '*':
         result = num1 * num2;
-        cout << "Произведение:" << endl;
+        cout << "Multiply:" << endl;
         result.print();
         break;
     case '/':
         result = num1 / num2;
-        cout << "Частное:" << endl;
+        cout << "Divide:" << endl;
         result.print();
         break;
     default:
-        cout << "Неизвестный знак операции" << endl;
+        cout << "Unknown operation sign" << endl;
         break;
     }
     return 0;
