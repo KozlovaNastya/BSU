@@ -40,22 +40,22 @@ int main() {
 		sred = sum / count;
 	for (const Fraction& frac : fractions)
 		cout <<"ID: " << frac.getID() << " Element: " << frac;
-	cout << "Среднее значение: " << sred << endl;
+	cout << "Average: " << sred << endl << endl;
 
 //------------------------------------------
-	cout << "Демонстрация методов класса" << endl;
+	cout << "Demonstration of class methods" << endl;
 	Fraction drob1;
 	Fraction drob2;
-	cout << "Вводите дроби следующим образом 1/3" << endl;
+	cout << "Enter fractions as follows: 1/3" << endl;
 	try {
-		cout << "Введите drob1: ";
+		cout << "Enter drob1: ";
 		cin >> drob1;
 	}
 	catch (const DivByZeroException& e) {
 		cerr << e.what() << endl;
 	}
 	try {
-		cout << "Введите brob2: ";
+		cout << "Enter brob2: ";
 		cin >> drob2;
 	}
 	catch (const DivByZeroException& e) {
@@ -66,76 +66,76 @@ int main() {
 	Fraction result;
 	bool proverka;
 
-	cout << "Сложение drob1 + drob2: " << endl;
+	cout << "Add drob1 + drob2: " << endl;
 	cout << drob1 + drob2;
-	cout << "Вычитание drob1 - drob2: " << endl;
+	cout << "Subtract drob1 - drob2: " << endl;
 	cout << drob1 - drob2;
-	cout << "Умножение drob1 * drob2: " << endl;
+	cout << "Multiply drob1 * drob2: " << endl;
 	cout << drob1 * drob2;
 	try {
-		cout << "Деление drob1 / drob2: " << endl;
+		cout << "Divide drob1 / drob2: " << endl;
 		cout << drob1 / drob2;
 	}
 	catch (const DivByZeroException& e) {
 		cerr << e.what() << endl;
 	}
-	cout << "Унарный минус для drob1: " << endl;
+	cout << "Unary minus for drob1: " << endl;
 	cout << -drob1;
-	cout << "Обратная drob1: " << endl;
+	cout << "Reverse drob1: " << endl;
 	cout << !drob1;
-	cout << "Операция += с числом 3 и drob2: " << endl;
+	cout << "Operation += with number 3 and drob2: " << endl;
 	cout << (drob2 += 3);
-	cout << "Операция -= с числом 3 и drob2: " << endl;
+	cout << "Operation -= with number 3 and drob2: " << endl;
 	cout << (drob2 -= 3);
-	cout << "Операция *= с числом 3 и drob2: " << endl;
+	cout << "Operation *= with number 3 and drob2: " << endl;
 	cout << (drob2 *= 3);
-	cout << "Операция /= с числом 3 и drob2: " << endl;
+	cout << "Operation /= with number 3 and drob2: " << endl;
 	cout << (drob2 /= 3);
-	cout << "Сложение c числом 3 справа и drob1: " << endl;
+	cout << "Addition with number 3 on the right and drob1: " << endl;
 	cout << (drob1 + 3);
-	cout << "Вычитание c числом 3 справа и drob1: " << endl;
+	cout << "Subtraction with the number 3 on the right and drob1: " << endl;
 	cout << (drob1 - 3);
-	cout << "Умножение c числом 3 справа и drob1: " << endl;
+	cout << "Multiplication with number 3 on the right and drob1: " << endl;
 	cout << (drob1 * 3);
-	cout << "Деление c числом 3 справа и drob1: " << endl;
+	cout << "Division with number 3 on the right and drob1: " << endl;
 	cout << (drob1 / 3);
-	cout << "Сложение c числом 3 слева и drob1: " << endl;
+	cout << "Addition with number 3 on the left and drob1: " << endl;
 	cout << (3 + drob1);
-	cout << "Вычитание c числом 3 слева и drob1: " << endl;
+	cout << "Subtraction with the number 3 on the left and drob1: " << endl;
 	cout << (3 - drob1);
-	cout << "Умножение c числом 3 слева и drob1: " << endl;
+	cout << "Multiplication with number 3 on the left and drob1: " << endl;
 	cout << (3 * drob1);
-	cout << "Деление c числом 3 слева и drob1: " << endl;
+	cout << "Division with number 3 on the left and drob1: " << endl;
 	cout << (3 / drob1);
-	cout << "Префиксный инкремент drob1: " << endl;
+	cout << "Prefix increment for drob1: " << endl;
 	cout << (++drob1);
-	cout << "Постфиксный инкремент для drob2: " << endl;
+	cout << "Postfix increment for drob2: " << endl;
 	cout << (drob2++);
-	cout << "Оператор присваивания для первой дроби: " << endl;
+	cout << "Assignment operator for first fraction: " << endl;
 	cout << (result = drob1);
-	cout << "Составной оператор += для drob1 и drob2: " << endl;
+	cout << "Compound operator += for drob1 and drob2: " << endl;
 	cout << (drob2 += drob1);
-	cout << "Составной оператор -= для drob1 и drob2: " << endl;
+	cout << "Compound operator -= for drob1 and drob2: " << endl;
 	cout << (drob2 -= drob1);
-	cout << "Составной оператор *= для drob1 и drob2: " << endl;
+	cout << "Compound operator *= for drob1 and drob2: " << endl;
 	cout << (drob2 *= drob1);
-	cout << "Составной оператор /= для drob1 и drob2: " << endl;
+	cout << "Compound operator /= for drob1 and drob2: " << endl;
 	cout << (drob2 /= drob1);
 	cout << "Сравнение drob1 == drob2 = ";
 	proverka = drob1 == drob2;
 	cout << proverka << endl;
-	cout << "Сравнение drob1 <= drob2 = ";
+	cout << "Comparison drob1 <= drob2 = ";
 	proverka = drob1 <= drob2;
 	cout << proverka << endl;
-	cout << "Сравнение drob1 < drob2 = ";
+	cout << "Comparison drob1 < drob2 = ";
 	proverka = drob1 < drob2;
 	cout << proverka << endl;
-	cout << "Сравнение drob1 >= drob2 = ";
+	cout << "Comparison drob1 >= drob2 = ";
 	proverka = drob1 >= drob2;
 	cout << proverka << endl;
-	cout << "Сравнение drob1 > drob2 = ";
+	cout << "Comparison drob1 > drob2 = ";
 	cout << (drob1 > drob2) << endl;
-	cout << "Десятичная drob1: ";
+	cout << "Decimal drob1: ";
 	cout << double(drob1);
 	return 0;
 }
