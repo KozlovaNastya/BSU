@@ -7,22 +7,22 @@ This program implements a Fraction class in C++, allowing various arithmetic ope
 1. Fraction Operations:
 - Supports addition, subtraction, multiplication, division of fractions.
 2. Compound Assignment:
-- Includes +=, -=, *=, /= for operations involving fractions and integers.
+- Includes `+=`, `-=`, `*=`, `/=` for operations involving fractions and integers.
 3. Unary Operations:
 - Supports unary negation and reciprocal of fractions.
 4. omparison Operators:
-- Fractions can be compared using ==, <=, <, >=, >.
+- Fractions can be compared using `==`, `<=`, `<`, `>=`, `>`.
 5. Input and Output:
-- Overloaded << and >> operators for user-friendly input/output of fractions.
+- Overloaded `<<` and `>>` operators for user-friendly input/output of fractions.
 6. Exception Handling:
 - Custom exception DivByZeroException is thrown when attempting to divide by zero.
 
 ## Files
-1. Fraction.h
+1. `Fraction.h`
 - Header file containing the definition of the Fraction class, the DivByZeroException class, and function prototypes.
-2. Fraction.cpp
+2. `Fraction.cpp`
 - Contains the implementation of the Fraction class methods and operators.
-3. main.cpp
+3. `main.cpp`
 - The main program that demonstrates the functionality of the Fraction class. It generates random fractions, performs arithmetic operations, and allows the user to input fractions and perform various operations.
 
 ## How It Works
@@ -32,9 +32,9 @@ This program implements a Fraction class in C++, allowing various arithmetic ope
 - The user is prompted to input two fractions, and the program will perform arithmetic operations on them.
 3. Arithmetic Operations:
 - The program supports addition, subtraction, multiplication, and division for both fractions and integers.
-- It also supports unary operations like negation (-) and reciprocal (!).
+- It also supports unary operations like negation (`-`) and reciprocal (`!`).
 4. Comparison Operations:
-- Fractions can be compared using operators like ==, <, >, <=, and >=.
+- Fractions can be compared using operators like `==`, `<`, `>`, `<=`, and `>=`.
 5. Exception Handling:
 - If the user tries to divide by zero, an exception will be thrown, and the error message will be displayed.
 
