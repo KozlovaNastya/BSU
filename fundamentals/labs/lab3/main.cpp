@@ -26,7 +26,7 @@ int getValue1(const int nmax) {
 		if (cin.fail() || n >= nmax || n <= 1) {
 			cin.clear();
 			cin.ignore(32767, '\n');
-			cout << "Неверно введено, попробуйте заново" << endl;
+			cout << "Invalid entry, please try again" << endl;
 		}
 		else
 		{
@@ -38,12 +38,12 @@ int getValue1(const int nmax) {
 int getValue2() {
 	while (true) {
 		int otv;
-		cout << "Вы хотите заполнить массив сами? (ответы: да = 1; нет = 0)" << endl;
+		cout << "Do you want to fill the array yourself? (answers: yes = 1; no = 0)" << endl;
 		cin >> otv;
 		if (cin.fail() || otv != 1 && otv != 0) {
 			cin.clear();
 			cin.ignore(32767, '\n');
-			cout << "Неверно введено, попробуйте заново" << endl;
+			cout << "Invalid entry, please try again" << endl;
 		}
 		else
 		{
@@ -59,7 +59,7 @@ int getValue3() {
 		if (cin.fail()) {
 			cin.clear();
 			cin.ignore(32767, '\n');
-			cout << "Неверно введено, попробуйте заново" << endl;
+			cout << "Invalid entry, please try again" << endl;
 		}
 		else
 		{
@@ -91,11 +91,11 @@ void proiz(int array[], int n) {
 			break;
 		}
 	if (kol2 == 0)
-		cout << "Hет двух нулевых элементов" << endl;
+		cout << "There are no two zero elements" << endl;
 	else {
 		for (i = kol1 + 1; i < kol2; i++)
 			proiz *= array[i];
-		cout << "Произведение  элементов массива, расположенных между первым и вторым нулевыми элементами = " << proiz << endl;
+		cout << "Product of array elements located between the first and second zero elements =" << proiz << endl;
 	}
 }
 void uborka(int array[], int n, int P) {
@@ -104,7 +104,7 @@ void uborka(int array[], int n, int P) {
 		if (array[i] == P)
 			chet++;
 	if (chet == 0)
-		cout << "Таких элементов в массиве нет";
+		cout << "There are no such elements in the array";
 	else {
 		for (int i = 0; i < n; i++)
 			for (int j = 0; j < n - 1 - i; j++)
@@ -115,7 +115,7 @@ void uborka(int array[], int n, int P) {
 	for (int i = 0; i < n; i++)
 		if (array[i] == P)
 			array[i] = 0;
-	cout << "Новый массив:" << endl;
+	cout << "New array:" << endl;
 	for (int i = 0; i < n; i++)
 		cout << array[i] << " ";
 	}
@@ -124,15 +124,15 @@ int main() {
 	setlocale(LC_ALL, ".1251");
 	const int nmax = 10;
 	int P, array[nmax];
-	cout << "Введите размер 1 <= кол-во элементов массива >= " << nmax << endl;
+	cout << "Enter size 1 <= number of array elements >=" << nmax << endl;
 	int n = getValue1(nmax);
 	int otv = getValue2();
-	cout << "Введите нижнюю границу интервала" << endl;
+	cout << "Enter the lower limit of the interval" << endl;
 	int niz = getValue3();
-	cout << "Введите верхнюю границу интервала" << endl;
+	cout << "Enter the upper limit of the interval" << endl;
 	int verh = getValue3();
 	if (otv == 1) {
-		cout << "Введите элементы массива:" << endl;
+		cout << "Enter Array Elements:" << endl;
 		for (int i = 0; i < n; i++)
 			cin >> array[i];
 	}
@@ -141,12 +141,12 @@ int main() {
 		for (int i = 0; i < n; i++) 
 			array[i] = niz + rand() % verh;
 	}
-	cout << "Исходный массив:" << endl;
+	cout << "Source array:" << endl;
 	for (int i = 0; i < n; i++)
 		cout << array[i] << " ";
-	cout << endl << "Количество перемен знака = " << znak(array, n) << endl;
+	cout << endl << "Number of sign changes = " << znak(array, n) << endl;
 	proiz(array, n);
-	cout << "Введите элемент, которые хотите убрать" << endl;
+	cout << "Enter the element you want to remove" << endl;
 	cin >> P;
 	uborka(array, n, P);
 	return 0;
