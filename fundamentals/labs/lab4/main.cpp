@@ -17,7 +17,7 @@ void Perestanovka(int rows, int columns, int** array) {
 			array[i][columns-j-1] = x;
 		}
 	}
-	cout << "Переставленный массив:" << endl;
+	cout << "Rearranged array:" << endl;
 	massiv(rows, columns, array);
 }
 void Sum(int rows, int columns, int** array) {
@@ -33,22 +33,22 @@ void Sum(int rows, int columns, int** array) {
 			}
 		}
 		if (sum != 0) {
-			cout << "Сумма элементов строки " << i+1 << " не содержащей нулей = " << sum << endl;
+			cout << "Sum of row elements " << i+1 << " containing no zeros = " << sum << endl;
 			sum = 0;
 			k++;
 		}
 	}
 	if (k == 0)
-			cout << "Все строки содержат 0" << endl;
+			cout << "All lines contain 0" << endl;
 }
 void Menu(int rows, int columns, int** array) {
 	int otv, min, max;
-	cout << "1. ввод с клавиатуры" << endl <<
-		"2. Ввод случайным образом" << endl;
+	cout << "1. keyboard input" << endl <<
+		"2. Enter randomly" << endl;
 	cin >> otv;
 	if (otv == 1){
 		system("cls");
-		cout << "Введите данные массива" << endl;
+		cout << "Enter array data" << endl;
 		for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < columns; j++)
 				cin >> array[i][j];
@@ -57,7 +57,7 @@ void Menu(int rows, int columns, int** array) {
 	}
 	else if (otv == 2) {
 		srand(time(0));
-		cout << "Введите диапазон чисел в массиве" << endl;
+		cout << "Enter a range of numbers in the array" << endl;
 		cin >> min >> max;
 		for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < columns; j++)
@@ -66,7 +66,7 @@ void Menu(int rows, int columns, int** array) {
 		system("cls");
 	}
 	else {
-		cout << "Ошибка ввода" << endl;
+		cout << "Input error" << endl;
 		system("pause");
 		system("cls");
 		Menu(rows, columns, array);
@@ -78,22 +78,22 @@ int main() {
 	const int maxColumns = 10;
 	int rows, columns;
 	int** array{ new int *[maxRows] {} };
-	cout << "Введите размерность массива:" << endl << 
-		"Количество строк должно не привышать 8 и быть не меньше 1" << endl <<
-		"Количество столбцов должно не превышать 10 и быть не меньше 1" << endl;
+	cout << "Enter array dimension:" << endl << 
+		"The number of lines must not exceed 8 and be at least 1" << endl <<
+		"The number of columns must not exceed 10 and be at least 1" << endl;
 	cin >> rows >> columns;
 	while (rows<1 || rows>maxRows) {
-		cout << "Ошибка при вводе числа строк" << endl;
+		cout << "Error when entering number of lines" << endl;
 		cin >> rows;
 	}
 	while (columns<1 || columns>maxColumns) {
-		cout << "Ошибка при вводе числа столбцов" << endl;
+		cout << "Error when entering number of columns" << endl;
 		cin >> columns;
 	}
 	for (int i = 0; i < rows; i++)
 		array[i] = new int[maxColumns] {};
 	Menu(rows, columns, array);
-	cout << "Исходный массив:" << endl;
+	cout << "Source array:" << endl;
 	massiv(rows, columns, array);
 	Sum(rows, columns, array);
 	Perestanovka(rows, columns, array);
