@@ -1,5 +1,5 @@
 ## Program Description
-This C++ program generates an n × n matrix, filling it in a specific pattern using prime numbers, and writes the result to an output file. The program reads the matrix size from an input file and ensures that the matrix size is within a valid range.
+This C++ program generates a n × n matrix, filling it in a specific pattern using prime numbers, and writes the result to an output file. The program reads the matrix size from an input file and ensures that the matrix size is within a valid range.
 
 ## Functionality
 1. Reads an integer `n` (matrix size) from `input.txt`.
