@@ -1,3 +1,2 @@
 Hello, World!
-This is a test file.
-With some random text!
+This is an Example.
