@@ -46,7 +46,7 @@ int main() {
 			start = (pos == string::npos) ? line.length() : pos + 1;
 		}
 		if (!flag) {
-			output << "палиндромов нет";
+			output << "there is no palindromes";
 		}
 		output << endl;
 	}
