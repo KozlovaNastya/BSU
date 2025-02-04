@@ -1,4 +1,4 @@
-#ifndef FRACTION_H // Защита от повторного включения
+#ifndef FRACTION_H
 #define FRACTION_H
 #include <iostream>
 #include <exception>
