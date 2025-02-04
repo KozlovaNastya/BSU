@@ -27,8 +27,8 @@ push(1.11);
 push(9.18);
 
 ## Example output  
-full stack: 9.18 1.11 13.5 
-After removing 1 element: 1.11 13.5 
+full stack: 9.18 1.11 13.5  
+After removing 1 element: 1.11 13.5  
 Top element: 1.11
 
 ## Additional Information  
