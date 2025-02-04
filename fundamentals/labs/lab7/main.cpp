@@ -37,7 +37,7 @@ public:
 
     ComplexNumbers operator/(const ComplexNumbers& other) const {
         if (other.real == 0 && other.img == 0) {
-            cout << "Ошибка: деление на 0!" << endl;
+            cout << "Error: division by 0!" << endl;
             return ComplexNumbers(); 
         }
         double denominator = other.real * other.real + other.img * other.img;
