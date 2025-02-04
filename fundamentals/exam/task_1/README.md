@@ -14,13 +14,10 @@ This C++ program reads input from a file, generates random numbers within a give
 - Ensures correct input format and range validation.
 
 ## Example input (input.txt)
-5
-
+5  
 10 50
 
 ## Example output (output.txt)
-23 41 12 35 47
-
-sorted:
-
+23 41 12 35 47  
+sorted:  
 12 23 41 35 47
