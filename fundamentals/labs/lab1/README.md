@@ -1,3 +1,4 @@
+# Taylor Series
 ## Program Description
 This C++ program calculates the natural logarithm function using both a custom series expansion and the standard log() function, then compares their results.
 
