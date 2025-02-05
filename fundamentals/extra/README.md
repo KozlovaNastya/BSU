@@ -1,6 +1,6 @@
 # Extra tasks from lectures
 
-- [task_1](https://github.com/KozlovaNastya/BSU/tree/main/fundamentals/extra/task_1): Box and Hole
+- [task_1](https://github.com/KozlovaNastya/BSU/tree/main/fundamentals/extra/task_1): Box Inside Hole Checker
 - [task_2](https://github.com/KozlovaNastya/BSU/tree/main/fundamentals/extra/task_2): Largest and Smallest Number Finder
 - [task_3](https://github.com/KozlovaNastya/BSU/tree/main/fundamentals/extra/task_3): Mathematical Expression Calculator
 - [task_4](https://github.com/KozlovaNastya/BSU/tree/main/fundamentals/extra/task_4): Quadratic Equation Solver
