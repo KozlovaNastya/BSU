@@ -9,7 +9,6 @@ int main() {
 	int B[N_max][N_max];
 	int C[N_max][N_max];
 	srand(0);
-//матрица А
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++)
 			A[i][j] = rand() % 100;
@@ -19,7 +18,6 @@ int main() {
 			cout << A[i][j] << " ";
 		cout << endl;
 	}
-//матрица В
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++)
 			B[i][j] = rand() % 100;
@@ -29,7 +27,6 @@ int main() {
 			cout << B[i][j] << " ";
 		cout << endl;
 	}
-//произведение матриц
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < k; j++) {
 			//C[i][j] = 0;
