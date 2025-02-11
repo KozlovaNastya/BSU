@@ -5,6 +5,7 @@ This repository is for labs on various subjects at the Belarusian State Universi
 
 ### Subjects
 - [Fundamentals and Methodologies of Programming](https://github.com/KozlovaNastya/BSU/tree/main/fundamentals) - `C++`
+- [Cross-platform Application Development]() - `C++`
 
 ---
 
@@ -14,7 +15,11 @@ This repository is for labs on various subjects at the Belarusian State Universi
   
 - [Fundamentals and Methodologies of Programming](https://github.com/KozlovaNastya/BSU/tree/main/fundamentals)
 </details>
-
+<details>
+<summary>semester 2</summary>
+  
+- - [Cross-platform Application Development]()
+</details>
 ---
 
 ## Additional resources
