@@ -21,7 +21,7 @@ This repository is for labs on various subjects at the Belarusian State Universi
 <summary>semester 2</summary>
   
 - [Cross-platform Application Development](https://github.com/KozlovaNastya/BSU/tree/main/cross-platform)
-- [Machine Oriented Programming](https://github.com/KozlovaNastya/BSU/tree/main/machine) - `C++` `ASM`
+- [Machine Oriented Programming](https://github.com/KozlovaNastya/BSU/tree/main/machine)
 </details>
 
 ---
