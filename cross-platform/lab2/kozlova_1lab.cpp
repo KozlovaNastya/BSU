@@ -1,4 +1,3 @@
-//Козлова Анастасия 10 группа
 #include <iostream>
 #include <vector>
 #include <stdexcept>
@@ -23,7 +22,7 @@ private:
 public:
     Rational(int numerator = 0, int denominator = 1) : num(numerator), denom(denominator) {
         if (denom == 0)
-            throw runtime_error("Знаменатель не может быть 0!");
+            throw runtime_error("The denominator cannot be 0!");
         reduce();
     }
 
@@ -43,7 +42,7 @@ public:
     }
 
     Rational operator/(const Rational& other) const {
-        if (other.num == 0) throw runtime_error("Деление на 0!");
+        if (other.num == 0) throw runtime_error("Division by 0!");
         return Rational(num * other.denom, denom * other.num);
     }
 
@@ -69,7 +68,7 @@ public:
     }
 
     Rational& operator/=(const Rational& other) {
-        if (other.num == 0) throw runtime_error("Деление на 0!");
+        if (other.num == 0) throw runtime_error("Division by 0!");
         num *= other.denom;
         denom *= other.num;
         reduce();
@@ -138,7 +137,7 @@ public:
 
     Matrix& operator += (const Matrix& other) {
         if (M != other.m.size() || N != other.m[0].size())
-            throw runtime_error("Размеры матриц не совпадают!");
+            throw runtime_error("The matrix sizes do not match!");
         for (int i = 0; i < M; i++)
             for (int j = 0; j < N; j++)
                 this->m[i][j] += other.m[i][j];
@@ -147,7 +146,7 @@ public:
 
     Matrix& operator -= (const Matrix& other) {
         if (M != other.m.size() || N != other.m[0].size())
-            throw runtime_error("Размеры матриц не совпадают!");
+            throw runtime_error("The matrix sizes do not match!");
         for (int i = 0; i < M; i++)
             for (int j = 0; j < N; j++)
                 this->m[i][j] -= other.m[i][j];
@@ -226,12 +225,12 @@ public:
     }
 
     const vector<Field>& getRow(size_t row) const {
-        if (row >= M) throw out_of_range("Индекс строки выходит за границы!");
+        if (row >= M) throw out_of_range("Row index is out of bounds!");
         return m[row];
     }
 
     vector<Field> getColumn(size_t col) const {
-        if (col >= N) throw out_of_range("Индекс столбца выходит за границы!");
+        if (col >= N) throw out_of_range("Column index is out of bounds!");
         vector<Field> column(M);
         for (size_t i = 0; i < M; i++)
             column[i] = m[i][col];
@@ -239,22 +238,22 @@ public:
     }
     
     Field& operator()(size_t i, size_t j) {
-        if (i >= M || j >= N) throw out_of_range("Индекс выходит за границы!");
+        if (i >= M || j >= N) throw out_of_range("Index is out of bounds!");
         return m[i][j];
     }
 
     const Field& operator()(size_t i, size_t j) const {
-        if (i >= M || j >= N) throw out_of_range("Индекс выходит за границы!");
+        if (i >= M || j >= N) throw out_of_range("Index is out of bounds!");
         return m[i][j];
     }
 
     vector<Field>& operator[](size_t i) {
-        if (i >= M) throw out_of_range("Индекс выходит за границы!");
+        if (i >= M) throw out_of_range("Index is out of bounds!");
         return m[i];
     }
 
     const vector<Field>& operator[](size_t i) const {
-        if (i >= M) throw out_of_range("Индекс выходит за границы!");
+        if (i >= M) throw out_of_range("Index is out of bounds!");
         return m[i];
     }
 
@@ -288,7 +287,7 @@ public:
     }
 
     SquareMatrix& operator*=(const SquareMatrix& other) {
-        if (N != other.m[0].size())  throw runtime_error("Размеры матриц не совпадают!");
+        if (N != other.m[0].size())  throw runtime_error("The matrix sizes do not match!");
         SquareMatrix temp;
         for (size_t i = 0; i < N; i++) {
             for (size_t j = 0; j < N; j++) {
@@ -350,7 +349,7 @@ public:
                     pivot = j;
 
             if (aug.m[pivot][i] == Field(0))
-                throw runtime_error("Матрица вырождена и не имеет обратной!");
+                throw runtime_error("The matrix is вЂ‹вЂ‹degenerate and has no inverse!");
 
             swap(aug.m[i], aug.m[pivot]);
             swap(inv.m[i], inv.m[pivot]);
@@ -380,19 +379,17 @@ public:
 };
 
 int main() {
-    setlocale(LC_ALL, ".1251");
-
     Matrix<1, 2, int> n;
-    cout << "Исходная матрица A 1*2:" << endl << n << endl;
+    cout << "Source matrix n 1*2:" << endl << n << endl;
 
     SquareMatrix<3, int> n1;
-    cout << "Исходная матрица A 3*3:" << endl << n1 << endl;
+    cout << "Source matrix n1 3*3:" << endl << n1 << endl;
 
     Matrix<3, 4, int> A({ {1, 2, 3, 4}, {4, 5, 6, 7}, {7, 8, 9, 1} });
-    cout << "Исходная матрица A 3*4:" << endl << A << endl;
+    cout << "Source matrix A 3*4:" << endl << A << endl;
 
     Matrix<3, 4, int> A1({ {1, 2, 3, 4}, {4, 5, 6, 7}, {7, 8, 9, 1} });
-    cout << "Исходная матрица A 3*4:" << endl << A1 << endl;
+    cout << "Source matrix A1 3*4:" << endl << A1 << endl;
 
     cout << "A += A1" << endl << (A += A1) << endl;
     cout << "A -= A1" << endl << (A -= A1) << endl;
@@ -402,21 +399,20 @@ int main() {
     cout << "A != A1 : " << (A != A1) << endl << endl;
 
     Matrix<4, 3, int> C({ {1, 2, 3}, {4, 5, 6}, {7, 8, 9}, { 1, 5, 4 } });
-    cout << "Исходная матрица С 4*3:" << endl << C << endl;
+    cout << "Source matrix C 4*3:" << endl << C << endl;
     cout << "A * 3" << endl << (A * 3) << endl << endl;
     cout << "A * C" << endl << (A * C) << endl << endl;
 
-    //cout << "Исходная матрица A 4*3:" << endl << A;
-    //cout << "A == B : " << (A == C) << endl;
-    // ошибка компиляции так как не совпадают размеры
+    //cout << "A == C : " << (A == C) << endl;
+    // compilation error because the sizes do not match
 
     cout << "A trasposed: " << endl << A.transposed() << endl;
     cout << "A rank: " << A.rank() << endl;
 
     SquareMatrix<2> B({ {1, 2}, {4, 5} });
-    cout << "Исходная матрица B 2*2:" << endl << B << endl;
+    cout << "Source matrix B 2*2:" << endl << B << endl;
     SquareMatrix<2> D({ {3, 4}, {6, 7} });
-    cout << "Исходная матрица D 2*2:" << endl << D << endl;
+    cout << "Source matrix D 2*2:" << endl << D << endl;
 
     cout << "B *= C" << endl << (B *= D) << endl;
     cout << "B det : " << B.det() << endl;
@@ -425,7 +421,7 @@ int main() {
     B.invert();
     cout << "B invert" << endl << B << endl << endl;
 
-    cout << "Покажем что возможно использовать для SquareMatrix методы из Matrix" << endl << endl;
+    cout << "Let's show that it is possible to use methods from Matrix for SquareMatrix" << endl << endl;
     cout << "B.getRow(0)" << endl;
     vector<Rational> b = B.getRow(0);
     for (auto x : b) {
@@ -440,7 +436,7 @@ int main() {
     cout << "B[1][0] : " << B[1][0] << endl;
 
     //cout << A.inverted();
-    //ошибка компиляции, так как А не квадратная матрица и для нее невозможно найти обратную
+    //compilation error, since A is not a square matrix and it is impossible to find its inverse
 
     return 0;
 }
