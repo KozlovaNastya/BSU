@@ -1,4 +1,4 @@
-## Program Description
+## Assembler Cycles
 
 This C++ program reads an integer input from the user, counts the occurrences of each digit, and determines the most frequently occurring digit using inline assembly.
 
