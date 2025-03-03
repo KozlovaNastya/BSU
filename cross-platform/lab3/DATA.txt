@@ -1,3 +1,4 @@
-1;Круг;тюльпан,роза,нарцисс,ruru
-3;квадрат;сирень,Ромашка,Ruru
-2;треугольник;Пион,ромашка,guguinos,ruru
+1;Round;Rose,Lily
+2;Square;Tulip,Sunflower
+3;Oval;Daisy,Rose,Lily
+4;Round;Daisy,Tulip
