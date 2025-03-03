@@ -1,4 +1,3 @@
-//Козлова Анастасия, 10 группа
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -96,13 +95,13 @@ int main() {
 		flowersS.push_back(f);
 	}
 	input.close();
-	cout << "отсортированно по формам" << endl;
+	cout << "sorted flowers beds" << endl;
 	sort(flowersS.begin(), flowersS.end(), cmpShape);
 	if (!flowersS.empty()) {
 		for (auto f : flowersS)
 			cout << f;
 	}
-	cout << "список всех цветов" << endl;
+	cout << "all species of flowers" << endl;
 	set<string> listOfFlow;
 	for (auto flowers : flowersS) {
 		for (auto f : flowers.getFlow()) {
@@ -110,23 +109,23 @@ int main() {
 		}
 	}
 	if (listOfFlow.empty()) {
-		cout << "Список всех цветов пуст!" << endl;
+		cout << "there is no data" << endl;
 	}
 	else {
 		for (auto f : listOfFlow) {
 			cout << f << endl;
 		}
 	}
-	cout << "номера клумб на которых нет 'ромашка'" << endl;
-	string word = "ромашка";
+	cout << "lines that contain diasy" << endl;
+	string word = "diasy";
 	for (auto flowers : flowersS) {
 		if (!findFlow(flowers, word)) {
 			cout << flowers.getNum() << endl;
 		}
 	}
-	cout << "общие цветы для всех клумб" << endl;
+	cout << "common flowers" << endl;
 	if (flowersS.empty()) {
-		cout << "Нет данных о клумбах!" << endl;
+		cout << "there is no data" << endl;
 		return 1;
 	}
 	vector<string> allFlowers = flowersS[0].getFlow();
@@ -152,9 +151,9 @@ int main() {
 		}
 	}
 	else {
-		cout << "Нет цветов, которые растут на всех клумбах!" << endl;
+		cout << "there is no data" << endl;
 	}
-	cout << "количество клумб на которых растет 2 вида цветков" << endl;
+	cout << "count of lines with 2 types of colors" << endl;
 	int count = 0;
 	for (auto f : flowersS) {
 		if (f.getFlow().size() == 2) {
@@ -162,7 +161,7 @@ int main() {
 		}
 	}
 	cout << count << endl;
-	cout << "удалим со всех строк 'ромашка'" << endl;
+	cout << "delete diasy from all lines" << endl;
 	for (auto& f : flowersS) {
 		auto& flow = f.getFlowRef();
 		flow.erase(remove(flow.begin(), flow.end(), word), flow.end());
@@ -172,7 +171,7 @@ int main() {
 			cout << f;
 	}
 	else {
-		cout << "нет данных!" << endl;
+		cout << "there is no data" << endl;
 	}
 	return 0;
 }
