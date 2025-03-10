@@ -109,15 +109,15 @@ int main() {
 		for (const auto& actor : allActors)
 			cout << actor << endl;
 	}
-	cout << "find count of films without 'helen'" << endl;
+	cout << "find count of films without 'helena'" << endl;
 	int count = 0;
-	string word = "helen";
+	string word = "helena";
 	for (const auto& film : listOfFilms) {
 		if (!findActor(film, word))
 			count++;
 	}
 	cout << count << endl;
-	cout << "find films with 'helen'" << endl;
+	cout << "find films with 'helena'" << endl;
 	bool isOut = false;
 	for (const auto& film : listOfFilms) {
 		if (findActor(film, word)) {
@@ -127,7 +127,7 @@ int main() {
 	}
 	if (!isOut)
 		cout << "there is no such films" << endl;
-	cout << "replace 'helen' with 'andrey'" << endl;
+	cout << "replace 'helena' with 'andrey'" << endl;
 	string word1 = "andrey";
 	for (auto& film : listOfFilms) {
 		if (findActor(film, word)) {
