@@ -48,67 +48,23 @@ Interstellar;2014;Matthew McConaughey,Anne Hathaway,Jessica Chastain
 
 ```
 Sorted Movie List:
-The Godfather;1972;Marlon Brando,Al Pacino,James Caan
-The Shawshank Redemption;1994;Tim Robbins,Morgan Freeman,Bob Gunton
-Pulp Fiction;1994;John Travolta,Uma Thurman,Samuel L. Jackson
-Forrest Gump;1994;Tom Hanks,Robin Wright,Gary Sinise
-Fight Club;1999;Brad Pitt,Edward Norton,Helena Bonham Carter
-The Matrix;1999;Keanu Reeves,Laurence Fishburne,Carrie-Anne Moss
-The Prestige;2006;Hugh Jackman,Christian Bale,Michael Caine
-The Dark Knight;2008;Christian Bale,Heath Ledger,Aaron Eckhart
-Inception;2010;Leonardo DiCaprio,Joseph Gordon-Levitt,Ellen Page
-Interstellar;2014;Matthew McConaughey,Anne Hathaway,Jessica Chastain
+inception;2010;leonardo dicaprio,joseph gordon-levitt,ellen page
+interstellar;2014;matthew mcconaughey,anne hathaway,jessica chastain
 
 List of All Unique Actors:
-Marlon Brando
-Al Pacino
-James Caan
-Tim Robbins
-Morgan Freeman
-Bob Gunton
-John Travolta
-Uma Thurman
-Samuel L. Jackson
-Tom Hanks
-Robin Wright
-Gary Sinise
-Brad Pitt
-Edward Norton
-Helena Bonham Carter
-Keanu Reeves
-Laurence Fishburne
-Carrie-Anne Moss
-Hugh Jackman
-Christian Bale
-Michael Caine
-Heath Ledger
-Aaron Eckhart
-Leonardo DiCaprio
-Joseph Gordon-Levitt
-Ellen Page
-Matthew McConaughey
-Anne Hathaway
-Jessica Chastain
+anne hathaway
+ellen page
+jessica chastain
+joseph gordon-levitt
+leonardo dicaprio
+matthew mcconaughey
 
-Count of Movies Without 'andrey':
-10
+Count of Movies Without 'andrey': 2
 
 Movies Featuring 'andrey':
-there is no such films
-
-Replacing 'andrey' with 'andrey':
-(no changes made since 'andrey' was not found)
+There is no such film.
 
 Updated Movie List:
-The Godfather;1972;Marlon Brando,Al Pacino,James Caan
-The Shawshank Redemption;1994;Tim Robbins,Morgan Freeman,Bob Gunton
-Pulp Fiction;1994;John Travolta,Uma Thurman,Samuel L. Jackson
-Forrest Gump;1994;Tom Hanks,Robin Wright,Gary Sinise
-Fight Club;1999;Brad Pitt,Edward Norton,Helena Bonham Carter
-The Matrix;1999;Keanu Reeves,Laurence Fishburne,Carrie-Anne Moss
-The Prestige;2006;Hugh Jackman,Christian Bale,Michael Caine
-The Dark Knight;2008;Christian Bale,Heath Ledger,Aaron Eckhart
-Inception;2010;Leonardo DiCaprio,Joseph Gordon-Levitt,Ellen Page
-Interstellar;2014;Matthew McConaughey,Anne Hathaway,Jessica Chastain
-
+inception;2010;leonardo dicaprio,joseph gordon-levitt,ellen page
+interstellar;2014;matthew mcconaughey,anne hathaway,jessica chastain
 ```
