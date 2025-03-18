@@ -13,7 +13,7 @@ private:
 	string shape;
 	vector<string> flow;
 public:
-	Flowers(int num, string shape, vector<string> flow) : num(num), shape(shape), flow(flow){}
+	Flowers(int num, string shape, vector<string> flow) : num(num), shape(shape), flow(move(flow)){}
 	int getNum() const { return num; }
 	string getShape() const { return shape; }
 	vector<string> getFlow() const{ return flow; }
