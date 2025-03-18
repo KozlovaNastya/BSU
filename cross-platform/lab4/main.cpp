@@ -1,4 +1,3 @@
-//Козлова Анастасия, 10 группа
 #include <iostream>
 #include <vector>
 #include <fstream>
