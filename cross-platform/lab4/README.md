@@ -1,4 +1,4 @@
-# Equation Solver Program
+# Virtual class and Inheritance
 
 ## Description
 
