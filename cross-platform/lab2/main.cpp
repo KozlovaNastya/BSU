@@ -111,19 +111,23 @@ Rational abs(const Rational& r) {
     return Rational(abs(r.getNumerator()), abs(r.getDenominator()));
 }
 
+Rational abs(const Rational& r) {
+    return Rational(abs(r.getNumerator()), abs(r.getDenominator()));
+}
+
 template<size_t M, size_t N, typename Field = Rational>
-class Matrix {
+class matrix_base {
 protected:
     vector<vector<Field>> m;
 public:
 
-    Matrix() : m(M, vector<Field>(N, Field(0))) {}
+   matrix_base() : m(M, vector<Field>(N, Field(0))) {}
 
-   Matrix(const vector<vector<Field>>& data) : m(data) {
+   matrix_base(const vector<vector<Field>>& data) : m(data) {
        m = data;
    }
 
-   bool operator==(const Matrix<M, N, Field>& other) const {
+   bool operator==(const matrix_base<M, N, Field>& other) const {
        if (M != other.m.size() || N != other.m[0].size()) return false;
        for (size_t i = 0; i < M; i++)
            for (size_t j = 0; j < N; j++)
@@ -131,42 +135,42 @@ public:
        return true;
    }
 
-    bool operator !=(const Matrix& other) const {
+    bool operator !=(const matrix_base& other) const {
         return !(*this == other);
     }
 
-    Matrix& operator += (const Matrix& other) {
+    matrix_base& operator += (const matrix_base& other) {
         if (M != other.m.size() || N != other.m[0].size())
-            throw runtime_error("The matrix sizes do not match!");
+            throw runtime_error("the matrix sizes do not match!");
         for (int i = 0; i < M; i++)
             for (int j = 0; j < N; j++)
                 this->m[i][j] += other.m[i][j];
         return *this;
     }
 
-    Matrix& operator -= (const Matrix& other) {
+    matrix_base& operator -= (const matrix_base& other) {
         if (M != other.m.size() || N != other.m[0].size())
-            throw runtime_error("The matrix sizes do not match!");
+            throw runtime_error("the matrix sizes do not match!");
         for (int i = 0; i < M; i++)
             for (int j = 0; j < N; j++)
                 this->m[i][j] -= other.m[i][j];
         return *this;
     }
 
-    Matrix operator + (const Matrix& other) const {
-        Matrix temp = *this;
+    matrix_base operator + (const matrix_base& other) const {
+        matrix_base temp = *this;
         temp += other;
         return temp;
     }
 
-    Matrix operator - (const Matrix& other) const {
-        Matrix temp = *this;
+    matrix_base operator - (const matrix_base& other) const {
+        matrix_base temp = *this;
         temp -= other;
         return temp;
     }
 
-    Matrix operator * (Field value) const {
-        Matrix temp = *this;
+    matrix_base operator * (Field value) const {
+        matrix_base temp = *this;
         for (int i = 0; i < M; i++)
             for (int j = 0; j < N; j++)
                 temp.m[i][j] = m[i][j] * value;
@@ -174,8 +178,8 @@ public:
     }
 
     template<size_t P> 
-    Matrix<M, P, Field> operator*(const Matrix<N, P, Field>& other) const {
-        Matrix<M, P, Field> result;
+    matrix_base<M, P, Field> operator*(const matrix_base<N, P, Field>& other) const {
+        matrix_base<M, P, Field> result;
         for (size_t i = 0; i < M; i++) {
             for (size_t j = 0; j < P; j++) {
                 for (size_t k = 0; k < N; k++) {
@@ -186,18 +190,17 @@ public:
         return result;
     }
 
-
-    Matrix<N, M, Field> transposed() const {
+    matrix_base<N, M, Field> transposed() const {
         vector<vector<Field>> transposed_data(N, vector<Field>(M));
         for (size_t i = 0; i < M; i++)
             for (size_t j = 0; j < N; j++)
                 transposed_data[j][i] = this->m[i][j];
 
-        return Matrix<N, M, Field>(transposed_data);
+        return matrix_base<N, M, Field>(transposed_data);
     }
 
     size_t rank() const {
-        Matrix<M, N, Field> temp = *this;
+        matrix_base<M, N, Field> temp = *this;
         size_t rank = 0;
 
         for (size_t col = 0, row = 0; col < N && row < M; col++) {
@@ -225,12 +228,12 @@ public:
     }
 
     const vector<Field>& getRow(size_t row) const {
-        if (row >= M) throw out_of_range("Row index is out of bounds!");
+        if (row >= M) throw out_of_range("Row index out of bounds!");
         return m[row];
     }
 
     vector<Field> getColumn(size_t col) const {
-        if (col >= N) throw out_of_range("Column index is out of bounds!");
+        if (col >= N) throw out_of_range("Column index out of bounds!");
         vector<Field> column(M);
         for (size_t i = 0; i < M; i++)
             column[i] = m[i][col];
@@ -238,33 +241,33 @@ public:
     }
     
     Field& operator()(size_t i, size_t j) {
-        if (i >= M || j >= N) throw out_of_range("Index is out of bounds!");
+        if (i >= M || j >= N) throw out_of_range("Index out of bounds!");
         return m[i][j];
     }
 
     const Field& operator()(size_t i, size_t j) const {
-        if (i >= M || j >= N) throw out_of_range("Index is out of bounds!");
+        if (i >= M || j >= N) throw out_of_range("Index out of bounds!");
         return m[i][j];
     }
 
     vector<Field>& operator[](size_t i) {
-        if (i >= M) throw out_of_range("Index is out of bounds!");
+        if (i >= M) throw out_of_range("Index out of bounds!");
         return m[i];
     }
 
     const vector<Field>& operator[](size_t i) const {
-        if (i >= M) throw out_of_range("Index is out of bounds!");
+        if (i >= M) throw out_of_range("Index out of bounds!");
         return m[i];
     }
 
-    friend istream& operator>>(istream& in, Matrix& mat) {
+    friend istream& operator>>(istream& in, matrix_base& mat) {
         for (size_t i = 0; i < M; i++)
             for (size_t j = 0; j < N; j++)
                 in >> mat.m[i][j];
         return in;
     }
 
-    friend ostream& operator<<(ostream& out, const Matrix& mat) {
+    friend ostream& operator<<(ostream& out, const matrix_base& mat) {
         for (size_t i = 0; i < M; i++) {
             for (size_t j = 0; j < N; j++)
                 out << mat.m[i][j] << " ";
@@ -274,21 +277,26 @@ public:
     }
 };
 
-template<size_t N, typename Field = Rational>
-class SquareMatrix : public Matrix<N, N, Field> {
+template<size_t M, size_t N, typename Field = Rational>
+class Matrix : public matrix_base<M, N, Field> {
+    using matrix_base<M, N, Field>::matrix_base;
+};
+
+template<size_t N, typename Field>
+class Matrix<N, N, Field> : public matrix_base<N, N, Field> {
 public:
+    
+    using matrix_base<N, N, Field>::matrix_base;
 
-   using Matrix<N, N, Field>::Matrix;
-
-    SquareMatrix() : Matrix<N, N, Field> (){
+    Matrix() : matrix_base<N, N, Field> (){
         for (size_t i = 0; i < N; i++) {
             this->m[i][i] = Field(1);
         }
     }
 
-    SquareMatrix& operator*=(const SquareMatrix& other) {
-        if (N != other.m[0].size())  throw runtime_error("The matrix sizes do not match!");
-        SquareMatrix temp;
+    Matrix& operator*=(const Matrix& other) {
+        if (N != other.m[0].size())  throw runtime_error("the matrix sizes do not match!");
+        Matrix temp;
         for (size_t i = 0; i < N; i++) {
             for (size_t j = 0; j < N; j++) {
                 temp.m[i][j] = 0;
@@ -302,7 +310,7 @@ public:
     }
 
     Field det() const {
-        SquareMatrix<N, Field> temp = *this;
+        Matrix<N, N, Field> temp = *this;
         Field det = Field(1);
 
         for (size_t i = 0; i < N; i++) {
@@ -338,9 +346,9 @@ public:
         return tr;
     }
 
-    SquareMatrix inverted() const {
-        SquareMatrix<N, Field> aug = *this;
-        SquareMatrix<N, Field> inv;
+    Matrix inverted() const {
+        Matrix<N, N, Field> aug = *this;
+        Matrix<N, N, Field> inv;
 
         for (size_t i = 0; i < N; i++) {
             size_t pivot = i;
@@ -349,7 +357,7 @@ public:
                     pivot = j;
 
             if (aug.m[pivot][i] == Field(0))
-                throw runtime_error("The matrix is ​​degenerate and has no inverse!");
+                throw runtime_error("The matrix is ​​singular and has no inverse.!");
 
             swap(aug.m[i], aug.m[pivot]);
             swap(inv.m[i], inv.m[pivot]);
@@ -377,6 +385,9 @@ public:
         *this = this->inverted();
     }
 };
+
+template<size_t N, typename Field = Rational>
+using SquareMatrix = Matrix<N, N, Field>;
 
 int main() {
     Matrix<1, 2, int> n;
