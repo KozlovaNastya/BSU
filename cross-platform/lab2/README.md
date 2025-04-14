@@ -1,7 +1,7 @@
 # Matrix and Rational Number Library
 
 ## Overview
-This project implements a matrix library with support for rational numbers. It provides operations on matrices, including addition, subtraction, multiplication, transposition, rank computation, and inversion (for square matrices). The library also defines a `Rational` class for working with rational numbers.
+This project provides a `C++` library for working with matrices and rational numbers. It includes support for both rectangular and square matrices with customizable numeric types, including a `Rational` class for exact arithmetic. The library supports various matrix operations such as addition, subtraction, multiplication, transposition, rank computation, and inversion (for square matrices).
 
 ## Features
 - **Rational Number Class (`Rational`)**
@@ -10,17 +10,23 @@ This project implements a matrix library with support for rational numbers. It p
   - Supports comparison operations
   
 - **Matrix Class (`Matrix<M, N, Field>`)**
-  - Supports general rectangular matrices of any size
-  - Arithmetic operations: `+`, `-`, `*` (scalar and matrix multiplication)
-  - Transposition
-  - Rank calculation
-  - Row and column access
+  - Template-based support for arbitrary matrix sizes and numeric types
+  - Matrix operations:
+    - Addition and subtraction
+    - Scalar and matrix multiplication
+    - Transposition
+    - Rank calculation
+  - Element and substructure access:
+    - Access individual elements: matrix(i, j)
+    - Access rows and columns: getRow(i), getColumn(j)
+    - Access via operator overloading: matrix[i][j]
   
 - **Square Matrix Class (`SquareMatrix<N, Field>`)**
-  - Inherits from `Matrix<N, N, Field>`
-  - Determinant calculation
-  - Trace computation
-  - Matrix inversion
+  - Inherits all features of the general Matrix class
+  - Additional operations for square matrices:
+    - Determinant calculation
+    - Trace computation
+    - Matrix inversionn
   
 ## Dependencies
 - C++ Standard Library (`iostream`, `vector`, `stdexcept`, `cmath`, `numeric`)
