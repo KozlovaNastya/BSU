@@ -390,6 +390,10 @@ template<size_t N, typename Field = Rational>
 using SquareMatrix = Matrix<N, N, Field>;
 
 int main() {
+    Matrix<100, 100> m_;
+    cout << "soure matrix det() and rank()" << endl;
+    cout << m_.det() << " " << m_.rank() << endl;
+
     Matrix<1, 2, int> n;
     cout << "Source matrix n 1*2:" << endl << n << endl;
 
