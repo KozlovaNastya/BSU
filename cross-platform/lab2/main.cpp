@@ -128,7 +128,6 @@ public:
    }
 
    bool operator==(const matrix_base<M, N, Field>& other) const {
-       if (M != other.m.size() || N != other.m[0].size()) return false;
        for (size_t i = 0; i < M; i++)
            for (size_t j = 0; j < N; j++)
                if (m[i][j] != other.m[i][j]) return false;
