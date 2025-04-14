@@ -9,7 +9,6 @@ This project demonstrates the use of Assembly functions with different calling c
   - `FindNum2` using `__cdecl`
   - `FindNum3` using `__fastcall`
 - `main.cpp`: Calls the above functions with sample data and prints the result.
-- `README.md`: This file.
 
 ## Assembly Functions
 
