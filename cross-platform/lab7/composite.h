@@ -9,7 +9,7 @@ public:
 	virtual void print(ostream& os) const = 0;
 	virtual bool hasSolution() const = 0;
 	virtual bool hasInfiniteSolutions() const = 0;
-	virtual double getLeadingCoefficient() const = 0; //вот ее будем
+	virtual double getLeadingCoefficient() const = 0;
 	virtual ~Equation() = default;
 };
 
