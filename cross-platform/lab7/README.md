@@ -16,7 +16,7 @@ This C++ program provides an object-oriented solution for solving **linear**, **
 - `composite.h` – Class definitions and interface declarations.
 
 
-## 🧪 Example Output
+## Example Output
 
 ```
 1x + 2 = 0
