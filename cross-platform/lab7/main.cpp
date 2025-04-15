@@ -1,4 +1,3 @@
-//Козлова Анастасия, 10 группа
 #include "composite.h"
 int main() {
 
