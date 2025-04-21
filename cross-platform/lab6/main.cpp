@@ -1,11 +1,11 @@
 #include "factory.h"
 int main() {
-	//èñïîëüçóÿ ôàáðè÷íûé ìåòîä
+	//counstructor
 	Equation* p1 = Equation::CreateEquation(LinearEquationID, 2, 6, 3);
 	p1->print(cout);
 	Equation* p2 = Equation::CreateEquation(QwadricEquationID, 0, 4, 2);
 	p2->print(cout);
-	//èñïîëüçóÿ ôàáðèêó
+	//class
 	LinearEquationFactory* lef = new LinearEquationFactory;
 	QwadricEquationFactory* qef = new QwadricEquationFactory;
 	Equation* p3 = lef->CreateEquation(2, 3, 5);
