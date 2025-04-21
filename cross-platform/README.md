@@ -9,3 +9,4 @@
 - [lab5_1](https://github.com/KozlovaNastya/BSU/tree/main/cross-platform/lab5_1) - Semantics of Moving: Credit Test
 - [lab6](https://github.com/KozlovaNastya/BSU/tree/main/cross-platform/lab6) - Factory Pattern
 - [lab7](https://github.com/KozlovaNastya/BSU/tree/main/cross-platform/lab7) - Composite Pattern
+- [lab8](https://github.com/KozlovaNastya/BSU/tree/main/cross-platform/lab8) - Iterator Pattern
