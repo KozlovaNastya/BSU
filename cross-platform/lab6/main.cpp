@@ -1,6 +1,6 @@
 #include "factory.h"
 int main() {
-	//counstructor
+	//method
 	Equation* p1 = Equation::CreateEquation(LinearEquationID, 2, 6, 3);
 	p1->print(cout);
 	Equation* p2 = Equation::CreateEquation(QwadricEquationID, 0, 4, 2);
