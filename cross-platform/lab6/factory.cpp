@@ -58,7 +58,7 @@ void LinearEquation::print(ostream& os) const {
 	if (b != 0) os << (b > 0 ? "+ " : "- ") << abs(b) << " ";
 	os << "= 0" << endl;
 }
-//параметризированный фабричный метод 
+//medthod
 Equation* Equation::CreateEquation(EquationID id, const double a, const double b, const double c) {
 	switch (id)
 	{
