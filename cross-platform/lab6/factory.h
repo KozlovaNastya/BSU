@@ -38,7 +38,6 @@ public:
 	double getSecondCoefficient() const;
 	void print(ostream& os) const override;
 };
-// Фабрики объектов 
 class Factory
 {
 public:
