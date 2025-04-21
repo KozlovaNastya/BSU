@@ -1,12 +1,11 @@
-//Êîçëîâà Àíàñòàñèÿ, 10 ãðóïïà
 #include "factory.h"
 int main() {
-	//èñïîëüçóÿ ôàáðè÷íûé ìåòîä
+	//Ã¨Ã±Ã¯Ã®Ã«Ã¼Ã§Ã³Ã¿ Ã´Ã Ã¡Ã°Ã¨Ã·Ã­Ã»Ã© Ã¬Ã¥Ã²Ã®Ã¤
 	Equation* p1 = Equation::CreateEquation(LinearEquationID, 2, 6, 3);
 	p1->print(cout);
 	Equation* p2 = Equation::CreateEquation(QwadricEquationID, 0, 4, 2);
 	p2->print(cout);
-	//èñïîëüçóÿ ôàáðèêó
+	//Ã¨Ã±Ã¯Ã®Ã«Ã¼Ã§Ã³Ã¿ Ã´Ã Ã¡Ã°Ã¨ÃªÃ³
 	LinearEquationFactory* lef = new LinearEquationFactory;
 	QwadricEquationFactory* qef = new QwadricEquationFactory;
 	Equation* p3 = lef->CreateEquation(2, 3, 5);
