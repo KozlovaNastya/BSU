@@ -5,7 +5,7 @@ This repository is for labs on various subjects at the Belarusian State Universi
 
 ### Subjects
 - [Fundamentals and Methodologies of Programming](https://github.com/KozlovaNastya/BSU/tree/main/fundamentals) - `C++`
-- [Cross-platform Application Development](https://github.com/KozlovaNastya/BSU/tree/main/cross-platform) - `C++`
+- [Cross-platform Application Development](https://github.com/KozlovaNastya/BSU/tree/main/cross-platform) - `C++` `Qt`
 - [Machine Oriented Programming](https://github.com/KozlovaNastya/BSU/tree/main/machine) - `C++` `ASM`
 
 ---
