@@ -10,3 +10,6 @@
 - [lab6](https://github.com/KozlovaNastya/BSU/tree/main/cross-platform/lab6) - Factory Pattern
 - [lab7](https://github.com/KozlovaNastya/BSU/tree/main/cross-platform/lab7) - Composite Pattern
 - [lab8](https://github.com/KozlovaNastya/BSU/tree/main/cross-platform/lab8) - Iterator Pattern
+- [lab9]() - Dot Graph on Qt
+- [lab10]() - "Bulls&Cows" Game on Qt
+- [lab11]() - mini Paint on Qt
