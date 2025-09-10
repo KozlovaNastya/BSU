@@ -1,4 +1,4 @@
-# Bulls and Cows Game (Qt Application)
+# "Bulls&Cows" Game (Qt Application)
 
 ## Overview
 This is a desktop implementation of the classic **Bulls and Cows** (in Russian: *Быки и Коровы*) game built with **Qt**.  
