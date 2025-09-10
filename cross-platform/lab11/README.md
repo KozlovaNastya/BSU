@@ -15,12 +15,12 @@ Additionally, the app supports **basic animation of figures**.
 - Animate created figures.  
 
 
-## ⚙️ Requirements
+## Requirements
 - **Qt 5/6** (Core, Widgets, GUI modules)  
 - **C++17** or newer  
 
 
-## 🔧 Build Instructions
+## Build Instructions
 ### Using qmake
 ```
 bash
