@@ -47,12 +47,12 @@ The application also includes a **records system** that stores the top 10 best r
 4. Press Check → The result is shown:
    - Bulls = correct digits in correct positions.
    - Cows = correct digits but wrong positions.
-5. The game continues until you guess all 4 digits (4 bulls → Victory 🎉).
+5. The game continues until you guess all 4 digits (4 bulls → Victory).
 6. On victory:
    - Enter your name to save the score in the records table.
    - The score (number of attempts) is saved to records.txt.
   
-## 🖼 Records System
+## Records System
 - Accessible via the Records button.
 - Displays top 10 scores (fewest attempts).
 - Stored in a plain text file:
