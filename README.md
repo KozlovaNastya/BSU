@@ -8,7 +8,7 @@ This repository is for labs on various subjects at the Belarusian State Universi
 - [Cross-platform Application Development](https://github.com/KozlovaNastya/BSU/tree/main/cross-platform) - `C++` `Qt`
 - [Machine Oriented Programming](https://github.com/KozlovaNastya/BSU/tree/main/machine) - `C++` `ASM`
 - [Industrial Programming](https://github.com/KozlovaNastya/BSU/tree/main/industrial) - `Java`
-- [Computer Graphics Programming](https://github.com/KozlovaNastya/BSU/tree/main/graphics) - `C#`
+- [Computer Graphics Programming](https://github.com/KozlovaNastya/BSU/tree/main/computer-graphics) - `C#`
 - [Mathematical Modeling of Systems](https://github.com/KozlovaNastya/BSU/tree/main/modeling) - `Python`
 
 ---
@@ -30,7 +30,7 @@ This repository is for labs on various subjects at the Belarusian State Universi
 <summary>semester 3</summary>
   
 - [Industrial Programming](https://github.com/KozlovaNastya/BSU/tree/main/industrial)
-- [Computer Graphics Programming](https://github.com/KozlovaNastya/BSU/tree/main/graphics)
+- [Computer Graphics Programming](https://github.com/KozlovaNastya/BSU/tree/main/computer-graphics)
 - [Mathematical Modeling of Systems](https://github.com/KozlovaNastya/BSU/tree/main/modeling)
 </details>
 
