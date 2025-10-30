@@ -10,6 +10,7 @@ This repository is for labs on various subjects at the Belarusian State Universi
 - [Industrial Programming](https://github.com/KozlovaNastya/BSU/tree/main/industrial) - `Java`
 - [Computer Graphics Programming](https://github.com/KozlovaNastya/BSU/tree/main/computer-graphics) - `C#`
 - [Mathematical Modeling of Systems](https://github.com/KozlovaNastya/BSU/tree/main/modeling) - `Python`
+- [Calculation Methods](https://github.com/KozlovaNastya/BSU/tree/main/methods) - `C++`
 
 ---
 
@@ -32,6 +33,7 @@ This repository is for labs on various subjects at the Belarusian State Universi
 - [Industrial Programming](https://github.com/KozlovaNastya/BSU/tree/main/industrial)
 - [Computer Graphics Programming](https://github.com/KozlovaNastya/BSU/tree/main/computer-graphics)
 - [Mathematical Modeling of Systems](https://github.com/KozlovaNastya/BSU/tree/main/modeling)
+- [Calculation Methods](https://github.com/KozlovaNastya/BSU/tree/main/methods)
 </details>
 
 ---
