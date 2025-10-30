@@ -272,6 +272,10 @@ namespace lab1
                 SafeSetTrackBar(trackBar5, s * 100);
                 SafeSetTrackBar(trackBar6, v * 100);
 
+                SafeSetTrackBar(trackBar7, l);
+                SafeSetTrackBar(trackBar8, a + 128);
+                SafeSetTrackBar(trackBar9, b_val + 128);
+
                 panel1.BackColor = currentColor;
             }
             finally
@@ -280,4 +284,5 @@ namespace lab1
             }
         }
     }
+
 }
