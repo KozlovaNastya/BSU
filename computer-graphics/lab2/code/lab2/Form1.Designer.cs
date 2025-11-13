@@ -34,13 +34,14 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.colFileName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDimensions = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colResolution = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colColorDepth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCompression = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCompressionPercent = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFormat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,6 +102,7 @@
             this.colResolution,
             this.colColorDepth,
             this.colCompression,
+            this.colCompressionPercent,
             this.colFormat});
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.Location = new System.Drawing.Point(12, 60);
@@ -110,6 +112,11 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(776, 378);
             this.dataGridView1.TabIndex = 6;
+            // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.WorkerReportsProgress = true;
+            this.backgroundWorker1.WorkerSupportsCancellation = true;
             // 
             // colFileName
             // 
@@ -146,17 +153,19 @@
             this.colCompression.Name = "colCompression";
             this.colCompression.ReadOnly = true;
             // 
+            // colCompressionPercent
+            // 
+            this.colCompressionPercent.HeaderText = "Сжатие %";
+            this.colCompressionPercent.MinimumWidth = 6;
+            this.colCompressionPercent.Name = "colCompressionPercent";
+            this.colCompressionPercent.ReadOnly = true;
+            // 
             // colFormat
             // 
             this.colFormat.HeaderText = "Формат";
             this.colFormat.MinimumWidth = 6;
             this.colFormat.Name = "colFormat";
             this.colFormat.ReadOnly = true;
-            // 
-            // backgroundWorker1
-            // 
-            this.backgroundWorker1.WorkerReportsProgress = true;
-            this.backgroundWorker1.WorkerSupportsCancellation = true;
             // 
             // Form1
             // 
@@ -184,13 +193,14 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFileName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDimensions;
         private System.Windows.Forms.DataGridViewTextBoxColumn colResolution;
         private System.Windows.Forms.DataGridViewTextBoxColumn colColorDepth;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCompression;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCompressionPercent;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFormat;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

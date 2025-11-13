@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
@@ -85,6 +84,7 @@ namespace lab2
                     imageInfo.Resolution,
                     imageInfo.ColorDepth,
                     imageInfo.Compression,
+                    imageInfo.CompressionPercent,
                     imageInfo.Format
                 );
                 label1.Text = $"Обработано: {dataGridView1.Rows.Count} файлов";
