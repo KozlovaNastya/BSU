@@ -5,4 +5,4 @@
 - [lab3](https://github.com/KozlovaNastya/BSU/tree/main/computer-graphics/lab3) - Linear Contrast & Segmentation
 - [lab4](https://github.com/KozlovaNastya/BSU/tree/main/computer-graphics/lab4) - Raster Algorithms
 - [lab5](https://github.com/KozlovaNastya/BSU/tree/main/computer-graphics/lab5) - Line and Polygon Clipping Algorithms
-- [lab6]
+- [lab6](https://github.com/KozlovaNastya/BSU/tree/main/computer-graphics/lab6) - 3D Graphics: Modeling, Transformation, and Projection
