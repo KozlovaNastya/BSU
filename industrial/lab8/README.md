@@ -1,4 +1,4 @@
-# Meeting Organization Client
+# Meeting Organization Client (TCP)
 
 ## Overview
 This project is a **Java console client application** for a meeting organization system.  
