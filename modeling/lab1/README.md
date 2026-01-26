@@ -1,4 +1,4 @@
-# Laboratory Work: Coin Toss Simulation
+# Coin Toss Simulation
 
 ## Objective
 To investigate statistical characteristics of coin toss sequences with different probabilities of getting heads.
