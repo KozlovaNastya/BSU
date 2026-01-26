@@ -1,4 +1,4 @@
-#Game Theory Strategy Analysis
+# Game Theory Strategy Analysis
 
 ## Objective
 To analyze and compare different strategies in a two-player game using point-based payoff matrices and evaluate their effectiveness through pairwise competition.
