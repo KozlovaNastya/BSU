@@ -32,7 +32,7 @@ where:
 
 ### Validation Logic
 1. Exactly 2 command-line arguments required
-2. k must be > 1 (ensures reasonable precision)
+2. k must be `> 1` (ensures reasonable precision)
 
 ### Algorithm Implementation
 ```java
