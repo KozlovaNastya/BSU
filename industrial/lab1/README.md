@@ -50,7 +50,7 @@ while (Math.abs(step) >= Eps) {
 
 ### Output Format
 - Both computed value and Math.sin(x) printed with k decimal places
-- Uses printf with dynamic format string: "%." + args[1] + "f\n"
+- Uses printf with dynamic format string: `"%." + args[1] + "f\n"`
 
 ### Key Features
 1. Efficient Computation
@@ -58,10 +58,10 @@ while (Math.abs(step) >= Eps) {
 - Avoids recomputing factorials and powers from scratch
 
 2. Precision Control
-- Stop criterion: |termₙ| < 10⁻⁽ᵏ⁺¹⁾
+- Stop criterion: `|termₙ| < 10⁻⁽ᵏ⁺¹⁾`
 - Provides k decimal places of accuracy in final result
 
 3. Error Handling
 - Validates input arguments
-- Ensures k > 1 for meaningful precision
+- Ensures `k > 1` for meaningful precision
 - Clear error messages and proper exit codes
