@@ -1,4 +1,4 @@
-# Meeting Organization Client (RMI) — Problem 9
+# Meeting Organization Client (RMI)
 
 ## Overview
 This project is a **Java console-based client application** for a meeting organization system implemented using **Java RMI (Remote Method Invocation)**.
