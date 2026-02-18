@@ -11,6 +11,8 @@ This repository is for labs on various subjects at the Belarusian State Universi
 - [Computer Graphics Programming](https://github.com/KozlovaNastya/BSU/tree/main/computer-graphics) - `C#` `WinForms`
 - [Mathematical Modeling of Systems](https://github.com/KozlovaNastya/BSU/tree/main/modeling) - `Python`
 - [Calculation Methods](https://github.com/KozlovaNastya/BSU/tree/main/methods) - `C++`
+- [Web Application Development](https://github.com/KozlovaNastya/BSU/tree/main/web) - `HTML` `CSS` `JavaScript`
+- [Operating Systems]() - `C++`
 
 ---
 
@@ -20,13 +22,14 @@ This repository is for labs on various subjects at the Belarusian State Universi
   
 - [Fundamentals and Methodologies of Programming](https://github.com/KozlovaNastya/BSU/tree/main/fundamentals)
 </details>
-<details>
 
+<details>
 <summary>semester 2</summary>
   
 - [Cross-platform Application Development](https://github.com/KozlovaNastya/BSU/tree/main/cross-platform)
 - [Machine Oriented Programming](https://github.com/KozlovaNastya/BSU/tree/main/machine)
 </details>
+
 <details>
 <summary>semester 3</summary>
   
@@ -34,6 +37,12 @@ This repository is for labs on various subjects at the Belarusian State Universi
 - [Computer Graphics Programming](https://github.com/KozlovaNastya/BSU/tree/main/computer-graphics)
 - [Mathematical Modeling of Systems](https://github.com/KozlovaNastya/BSU/tree/main/modeling)
 - [Calculation Methods](https://github.com/KozlovaNastya/BSU/tree/main/methods)
+</details>
+
+<details>
+<summary>semester 4</summary>
+  
+- [Web Application Development](https://github.com/KozlovaNastya/BSU/tree/main/web)
 </details>
 
 ---
