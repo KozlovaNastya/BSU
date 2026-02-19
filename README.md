@@ -12,7 +12,8 @@ This repository is for labs on various subjects at the Belarusian State Universi
 - [Mathematical Modeling of Systems](https://github.com/KozlovaNastya/BSU/tree/main/modeling) - `Python`
 - [Calculation Methods](https://github.com/KozlovaNastya/BSU/tree/main/methods) - `C++`
 - [Web Application Development](https://github.com/KozlovaNastya/BSU/tree/main/web) - `HTML` `CSS` `JavaScript`
-- [Operating Systems]() - `C++`
+- [Operating Systems](https://github.com/KozlovaNastya/BSU/tree/main/systems) - `C++`
+- [Mobile Development for IOS](https://github.com/KozlovaNastya/BSU/tree/main/ios) -`C`
 
 ---
 
@@ -43,6 +44,8 @@ This repository is for labs on various subjects at the Belarusian State Universi
 <summary>semester 4</summary>
   
 - [Web Application Development](https://github.com/KozlovaNastya/BSU/tree/main/web)
+- [Operating Systems](https://github.com/KozlovaNastya/BSU/tree/main/systems)
+- [Mobile Development for IOS](https://github.com/KozlovaNastya/BSU/tree/main/ios)
 </details>
 
 ---
