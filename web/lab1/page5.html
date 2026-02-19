@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резиновая рамка</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        
+        h1 {
+            color: #8B4513;
+            text-align: center;
+        }
+        
+        .ramka-container {
+            width: 100%;
+            min-height: 200px;
+            position: relative;
+        }
+        
+        .ramka {
+            position: relative;
+            width: 100%;
+            min-height: 200px;
+        }
+        
+        .corner {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            z-index: 2;
+        }
+        
+        .corner-tl {
+            top: 0;
+            left: 0;
+            background-image: url('images/ramka1.png');
+        }
+        
+        .corner-tr {
+            top: 0;
+            right: 0;
+            background-image: url('images/ramka3.png');
+        }
+        
+        .corner-bl {
+            bottom: 0;
+            left: 0;
+            background-image: url('images/ramka7.png');
+        }
+        
+        .corner-br {
+            bottom: 0;
+            right: 0;
+            background-image: url('images/ramka9.png');
+        }
+        
+        .side-left {
+            position: absolute;
+            top: 30px;
+            bottom: 30px;
+            left: 0;
+            width: 30px;
+            background-image: url('images/ramka4.png');
+            background-repeat: repeat-y;
+            z-index: 1;
+        }
+        .side-right {
+            position: absolute;
+            top: 30px;
+            bottom: 30px;
+            right: 0;
+            width: 30px;
+            background-image: url('images/ramka4.png');
+            background-repeat: repeat-y;
+            z-index: 1;
+        }
+        
+        .side-top {
+            position: absolute;
+            top: 0;
+            left: 30px;
+            right: 30px;
+            height: 30px;
+            background-image: url('images/ramka2.png'); 
+            background-repeat: repeat-x;
+            z-index: 1;
+        }
+        
+        .side-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 30px;
+            right: 30px;
+            height: 30px;
+            background-image: url('images/ramka2.png');
+            background-repeat: repeat-x;
+            z-index: 1;
+        }
+        
+        .content {
+            position: relative;
+            margin: 30px;
+            padding: 20px;
+            background-color: white;
+            z-index: 0;
+            min-height: 100px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            background-image: url('images/ramka5.png');
+            background-repeat: repeat;
+        }
+        
+        .content p {
+            margin: 0 0 15px 0;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        
+        .content h2 {
+            margin-top: 0;
+            color: #8B4513;
+            border-bottom: 1px solid #DEB887;
+            padding-bottom: 10px;
+        }
+        
+        .info {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Резиновая рамка для рецептов</h1>
+    
+    <div class="ramka-container">
+        <div class="ramka">
+            <div class="corner corner-tl"></div>
+            <div class="corner corner-tr"></div>
+            <div class="corner corner-bl"></div>
+            <div class="corner corner-br"></div>
+            
+            <div class="side-top"></div>
+            <div class="side-bottom"></div>
+            <div class="side-left"></div>
+            <div class="side-right"></div>
+            
+            <div class="content">
+                <h2>Секреты идеальной выпечки</h2>
+                
+                <p>Каждая хозяйка знает: настоящая выпечка получается вкусной только тогда, когда в неё добавлена особая приправа — любовь. Но есть и несколько профессиональных секретов, которые сделают ваши пироги и булочки невероятно вкусными.</p>
+                
+                <p>Первый секрет: все ингредиенты должны быть комнатной температуры. Достаньте яйца и молоко из холодильника за час до начала приготовления. Тесто скажет вам спасибо!</p>
+                
+                <p>Второй секрет: муку обязательно нужно просеивать. Это не просто дань традиции — так мука насыщается кислородом, и выпечка получается более пышной и воздушной.</p>
+                
+                <p>Третий секрет: не открывайте духовку первые 20 минут выпекания. Резкий перепад температуры может испортить даже самое удачное тесто, и ваш бисквит осядет.</p>
+                
+                <p>Четвертый секрет: экспериментируйте с начинками! Классические яблоки можно заменить грушами с имбирем, а привычную вишню дополнить шоколадной крошкой. И не бойтесь добавлять специи — корица, кардамон и ваниль творят чудеса.</p>
+                
+                <p>Помните: кулинария — это не строгая наука, а искусство, где есть место импровизации. Доверяйте своей интуиции, и ваши блюда всегда будут особенными!</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

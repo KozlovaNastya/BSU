@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблица ингредиентов</title>
+    <style>
+        
+        h1 {
+            color: #8B4513;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        th, td {
+            border: 2px solid #8B4513;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .third-column, th:nth-child(3) {
+            background-color: #FFE4B5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Таблица ингредиентов для выпечки</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Название ингредиента</th>
+                <th>Цена (руб/кг)</th>
+                <th>Необходимое количество</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td>Мука пшеничная</td>
+                <td rowspan="3">65</td>
+                <td class="third-column">500 г</td>
+            </tr>
+            <tr>
+                <td>Сахар белый</td>
+                <td class="third-column">1 кг</td>
+            </tr>
+            <tr>
+                <td>Сахар свекольный</td>
+                <td class="third-column">2 кг</td>
+            </tr>
+            
+            <tr>
+                <td>Масло сливочное</td>
+                <td rowspan="2">85</td>
+                <td class="third-column">200 г</td>
+            </tr>
+            <tr>
+                <td>Маргарин</td>
+                <td class="third-column">500 г</td>
+            </tr>
+            
+            <tr>
+                <td>Яйца</td>
+                <td>120</td>
+                <td class="third-column">3 шт</td>
+            </tr>
+            <tr>
+                <td>Молоко</td>
+                <td>75</td>
+                <td class="third-column">500 мл</td>
+            </tr>
+            <tr>
+                <td>Дрожжи</td>
+                <td>50</td>
+                <td class="third-column">10 г</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
