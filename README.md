@@ -42,7 +42,8 @@ This repository is for labs on various subjects at the Belarusian State Universi
 
 <details>
 <summary>semester 4</summary>
-  
+
+- [Calculation Methods](https://github.com/KozlovaNastya/BSU/tree/main/methods)
 - [Web Application Development](https://github.com/KozlovaNastya/BSU/tree/main/web)
 - [Operating Systems](https://github.com/KozlovaNastya/BSU/tree/main/systems)
 - [Mobile Development for IOS](https://github.com/KozlovaNastya/BSU/tree/main/ios)
