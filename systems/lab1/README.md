@@ -1,6 +1,6 @@
 # Process Creation in Windows
 
-This is an educational project for the "Programming Technologies" course. The system consists of a main orchestrator application and two utility programs.
+This is an educational project. The system consists of a main orchestrator application and two utility programs.
 
 ## System Components
 
