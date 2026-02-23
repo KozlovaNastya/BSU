@@ -1,5 +1,5 @@
 # HTML & CSS Basics
-This laboratory work focuses on creating a multi-page HTML website with various CSS styling techniques. The project is based on a **Culinary Recipes** Collection theme (Variant #3).
+This laboratory work focuses on creating a multi-page HTML website with various CSS styling techniques. The project is based on a **Culinary Recipes** Collection theme.
 
 ## Tasks Completed
 ### Task 1: Two-Page Structure with Bookmarks
