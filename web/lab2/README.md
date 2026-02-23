@@ -1,5 +1,5 @@
 # Laboratory Work №2: Table & Block Layout
-This project demonstrates two different approaches to web layouts: Table-based and Block-based (DIV), using the **Culinary Recipes** theme (Variant #3).
+This project demonstrates two different approaches to web layouts: Table-based and Block-based (DIV), using the **Culinary Recipes** theme.
 
 ## Objectives
 - Create a rubber (fluid) layout where the main column stretches.
