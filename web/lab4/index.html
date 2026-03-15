@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление блюдами</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .controls { display: flex; flex-direction: column; gap: 10px; width: 300px; }
+        input[type="button"] { 
+            padding: 10px;
+            cursor: pointer; 
+            background-color: #2c3e50; 
+            color: white; 
+            border: none;
+            border-radius: 4px;
+        }
+        input[type="button"]:hover { background-color: #34495e; }
+    </style>
+</head>
+<body>
+    <div>
+        <input onclick="addValue();" value="Ввод информации о блюде" type="button">
+        <input onclick="deleteValue();" value="Удаление информации о блюде" type="button">
+        <input onclick="getValueInfo();" value="Получение информации о блюде" type="button">
+        <input onclick="listValues();" value="Перечень всех блюд" type="button">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
