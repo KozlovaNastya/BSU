@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Динамическое меню</title>
+    <style>
+        body { font-family: sans-serif; background-color: #ecf0f1; margin: 20px; }
+        
+        #main-menu-row {
+            display: flex;
+            background-color: #2c3e50;
+            padding: 0 10px;
+            position: relative;
+        }
+
+        .menu-item {
+            color: white;
+            padding: 12px 20px;
+            cursor: pointer;
+            border: 1px solid #34495e;
+            background-color: #2c3e50;
+            white-space: nowrap;
+            user-select: none;
+            position: relative;
+        }
+
+        .menu-item:hover { background-color: #3498db; }
+
+        .submenu-container {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            background-color: #2c3e50;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            z-index: 100;
+        }
+
+        .has-submenu::after { content: ' ▼'; font-size: 0.8em; }
+    </style>
+</head>
+<body>
+    <p><a href="main.html">← Вернуться на главную</a></p>
+
+    <div id="main-menu-row"></div>
+
+    <script>
+        var MenuA = [
+            {name:'Каши', submenu: [ 
+                {name: 'Сладкие', submenu: [ 
+                    {name:'Овсянка', url: ''},
+                    {name:'Манка', url: ''} 
+                ]}, 
+                {name:'Несладкие', url: ''}, 
+                {name:'Молочные', submenu: [ 
+                    {name:'Гречневая', url: ''},
+                    {name:'Рисовая', url: ''},
+                    {name:'Нутовая', url: ''},
+                    {name:'Пшенная', url: ''} 
+                ]} 
+            ]}, 
+            {name: 'Йогурты', url: ''}, 
+            {name:'Напитки', submenu: [ 
+                {name:'Чай', url: ''}, 
+                {name:'Кофе', url: ''} 
+            ]} 
+        ];
+
+        function ShowMenu(MenuItemsA, ParentElem) {
+            if (ParentElem.nextSibling && ParentElem.nextSibling.className === 'submenu-container') {
+                ParentElem.nextSibling.remove();
+                return;
+            }
+
+            const container = document.createElement('div');
+            container.className = 'submenu-container';
+
+            const rect = ParentElem.getBoundingClientRect();
+            if (ParentElem.id === 'main-menu-row') {
+                container.style.top = rect.height + 'px';
+                container.style.left = '0px';
+                container.style.flexDirection = 'row';
+            } else {
+                const isTopLevel = ParentElem.parentNode.id === 'main-menu-row';
+                container.style.top = isTopLevel ? rect.height + 'px' : '0px';
+                container.style.left = isTopLevel ? '0px' : rect.width + 'px';
+            }
+
+            MenuItemsA.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'menu-item';
+                div.textContent = item.name;
+
+                if (item.submenu) {
+                    div.classList.add('has-submenu');
+                    div.onclick = function(e) {
+                        e.stopPropagation();
+                        const siblings = container.querySelectorAll('.submenu-container');
+                        siblings.forEach(s => s.remove());
+                        
+                        ShowMenu(item.submenu, div);
+                    };
+                } else if (item.url) {
+                    div.onclick = () => window.open(item.url, '_blank');
+                }
+
+                container.appendChild(div);
+            });
+
+            ParentElem.appendChild(container);
+        }
+
+        window.onload = function() {
+            const root = document.getElementById('main-menu-row');
+            ShowMenu(MenuA, root);
+        };
+
+        document.onclick = function() {
+            const allSubmenus = document.querySelectorAll('.submenu-container');
+            allSubmenus.forEach((m, index) => {
+                if (index > 0) m.remove(); 
+            });
+        };
+    </script>
+</body>
+</html>
