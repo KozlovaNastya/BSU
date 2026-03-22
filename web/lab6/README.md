@@ -1,0 +1,2 @@
+- [task1](https://github.com/KozlovaNastya/BSU/tree/main/web/lab6/task1): Dynamic Recursive Menu
+- [task2](https://github.com/KozlovaNastya/BSU/tree/main/web/lab6/task2): Persistent Storage System
