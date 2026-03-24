@@ -1,67 +1,39 @@
 ﻿#include <iostream>
-#include <vector>
-#include <windows.h>
+#include "logic.h"
 
-struct ThreadData {
-    std::vector<int>* arr;
-    int min_idx;
-    int max_idx;
-    double average;
-};
-
-DWORD WINAPI min_max(LPVOID lpParam) {
+DWORD WINAPI min_max_thread(LPVOID lpParam) {
     ThreadData* data = (ThreadData*)lpParam;
-    auto& a = *(data->arr);
-
-    data->min_idx = 0;
-    data->max_idx = 0;
-
-    for (size_t i = 1; i < a.size(); ++i) {
-        if (a[i] < a[data->min_idx]) data->min_idx = i;
-        Sleep(7);
-        if (a[i] > a[data->max_idx]) data->max_idx = i;
-        Sleep(7);
-    }
-    std::cout << "Min: " << a[data->min_idx] << ", Max: " << a[data->max_idx] << std::endl;
+    find_min_max(*(data->arr), data->min_idx, data->max_idx);
     return 0;
 }
 
-DWORD WINAPI average(LPVOID lpParam) {
+DWORD WINAPI average_thread(LPVOID lpParam) {
     ThreadData* data = (ThreadData*)lpParam;
-    auto& a = *(data->arr);
-    double sum = 0;
-
-    for (int x : a) {
-        sum += x;
-        Sleep(12);
-    }
-    data->average = sum / a.size();
-    std::cout << "Average: " << data->average << std::endl;
+    data->average = calculate_average(*(data->arr));
     return 0;
 }
-
 
 int main() {
     int n;
-    std::cout << "Enter array size: ";
-    std::cin >> n;
+    std::cout << "Enter size: "; std::cin >> n;
     std::vector<int> arr(n);
     for (int& x : arr) std::cin >> x;
 
-    ThreadData data = { &arr, 0, 0, 0.0 };
+    ThreadData data; data.arr = &arr;
 
-    HANDLE hMinMax = CreateThread(NULL, 0, min_max, &data, 0, NULL);
-    HANDLE hAverage = CreateThread(NULL, 0, average, &data, 0, NULL);
+    HANDLE h1 = CreateThread(NULL, 0, min_max_thread, &data, 0, NULL);
+    HANDLE h2 = CreateThread(NULL, 0, average_thread, &data, 0, NULL);
 
-    WaitForSingleObject(hMinMax, INFINITE);
-    WaitForSingleObject(hAverage, INFINITE);
+    WaitForSingleObject(h1, INFINITE);
+    WaitForSingleObject(h2, INFINITE);
+
+    std::cout << "Min: " << arr[data.min_idx] << ", Max: " << arr[data.max_idx] << ", Avg: " << data.average << "\n";
 
     arr[data.min_idx] = (int)data.average;
     arr[data.max_idx] = (int)data.average;
 
     for (int x : arr) std::cout << x << " ";
 
-    CloseHandle(hMinMax);
-    CloseHandle(hAverage);
+    CloseHandle(h1); CloseHandle(h2);
     return 0;
 }
