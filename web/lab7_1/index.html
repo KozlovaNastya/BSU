@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя Кулинарная Книга (SPA)</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; padding: 40px; background-color: #f9f9f9; color: #333; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        
+        .page { display: none; } 
+        .active { display: block; animation: fadeIn 0.5s; }
+        
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 25px; }
+        th, td { border: 1px solid #eee; padding: 15px; text-align: left; }
+        th { background-color: #ff7e5f; color: white; }
+        tr:nth-child(even) { background-color: #fffaf9; }
+
+        .btn { 
+            display: inline-block; padding: 12px 24px; cursor: pointer; 
+            background: #ff7e5f; color: white; border: none; 
+            border-radius: 25px; text-transform: uppercase; font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn:hover { background: #feb47b; }
+        .btn-secondary { background: #666; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <section id="home" class="page active">
+        <h1>Сборник кулинарных рецептов</h1>
+        <p>Добро пожаловать! Это приложение поможет вам хранить любимые рецепты и быстро находить нужные инструкции по приготовлению блюд.</p>
+        <p>Нажмите кнопку ниже, чтобы открыть список доступных рецептов.</p>
+        <button class="btn" onclick="navigateTo('recipes')">Открыть книгу рецептов</button>
+    </section>
+
+    <section id="recipes" class="page">
+        <h1> Список рецептов</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Название блюда</th>
+                    <th>Основные ингредиенты и приготовление</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Паста Карбонара</strong></td>
+                    <td>Спагетти, бекон, желтки, сыр Пармезан, черный перец. Обжарить бекон, смешать с пастой и соусом из желтков и сыра.</td>
+                </tr>
+                <tr>
+                    <td><strong>Салат Цезарь</strong></td>
+                    <td>Листья салата, куриное филе, сухарики, черри, соус Цезарь. Обжарить курицу, смешать с зеленью и заправить соусом.</td>
+                </tr>
+                <tr>
+                    <td><strong>Блины классические</strong></td>
+                    <td>Мука, молоко, яйца, сахар, щепотка соли. Смешать тесто до однородности и выпекать на раскаленной сковороде.</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-secondary" onclick="navigateTo('home')">← Вернуться назад</button>
+    </section>
+</div>
+
+<script>
+    function navigateTo(pageId) {
+        document.querySelectorAll('.page').forEach(page => {
+            page.classList.remove('active');
+        });
+
+        const targetPage = document.getElementById(pageId);
+        if (targetPage) {
+            targetPage.classList.add('active');
+        }
+    }
+</script>
+
+</body>
+</html>
