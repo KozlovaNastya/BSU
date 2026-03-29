@@ -5,3 +5,4 @@
 - [lab4](https://github.com/KozlovaNastya/BSU/tree/main/web/lab4): Culinary Collection & Dish Management System (OOP Version)
 - [lab5](https://github.com/KozlovaNastya/BSU/tree/main/web/lab5): Culinary Collection & Dynamic Recipe Form
 - [lab6](https://github.com/KozlovaNastya/BSU/tree/main/web/lab6): Dynamic Recursive Menu & Persistent Storage System
+- [lab7_1](https://github.com/KozlovaNastya/BSU/tree/main/web/lab6): Single Page Application
