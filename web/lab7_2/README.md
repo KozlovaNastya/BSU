@@ -1,37 +1,51 @@
 # Culinary Book: AJAX-Powered SPA
 
-An advanced Single Page Application (SPA) that loads content dynamically from external HTML files without refreshing the browser tab.
+A comprehensive web application that combines a Single Page Application (SPA) frontend with a Node.js/Express backend to manage, display, and download recipe data.
 
 ## Project Structure
 
-*   **index.html** — The main application shell. Contains the global styles and the navigation engine.
-*   **home.html** — Fragment file for the landing page content.
-*   **recipes.html** — Fragment file containing the recipe database table.
+*   **server.js** — The Node.js backend using **Express**. Handles static file serving and the secure file download route.
+*   **index.html** — The application shell containing the global UI and the AJAX/Fetch logic.
+*   **home.html & recipes.html** — Content fragments loaded dynamically into the main shell.
+*   **data.json** — External data source containing additional recipe records.
 
 ## Key Features
 
-### 1. Dynamic Content Fetching (AJAX)
-The app uses the modern **Fetch API** with `async/await` syntax. Instead of hiding/showing hidden divs, it physically requests the content of `home.html` or `recipes.html` and injects it into the `#app` container.
+### 1. Backend Integration (Node.js & Express)
+The project now includes a real server environment. It serves the application and provides a dedicated endpoint (`/download-data`) that allows users to download the recipe database as a physical file using `res.download()`.
 
-### 2. True SPA Architecture
-*   **Asynchronous Loading:** Only the necessary content is downloaded when needed, saving initial bandwidth.
-*   **Error Handling:** Includes a `try...catch` block to notify the user if a page fails to load or a network error occurs.
-*   **Initial State:** The `DOMContentLoaded` listener ensures the "Home" page is automatically loaded as soon as the shell is ready.
+### 2. Dynamic JSON Data Injection
+The `loadJsonData()` function demonstrates how to fetch raw JSON data asynchronously. It parses the object and dynamically builds an HTML table to inject into the "Home" page, showcasing **Client-Side Rendering (CSR)**.
 
-### 3. Modular Design
-By separating content into standalone HTML fragments, the project remains organized and easy to scale. Adding a new section (like "Contacts") only requires creating a new `.html` file and calling `navigateTo('contacts')`.
+### 3. Advanced AJAX Workflow
+*   **HTML Fetching:** Swaps pages without reloads.
+*   **JSON Fetching:** Pulls structured data from the server and transforms it into visual elements.
+*   **Async/Await:** Clean, modern JavaScript for handling multiple network requests.
+
+### 4. File Management
+Users can export the collection. The "Download JSON" button triggers a backend route that sends the `data.json` file directly to the user's computer.
 
 ## Technologies
 
-*   **HTML5 / CSS3** — Core structure and modern UI styling.
-*   **JavaScript (ES6+)** — **Asynchronous Fetch API**, DOM manipulation, and dynamic HTML injection.
+*   **Backend:** Node.js, Express.js.
+*   **Frontend:** JavaScript (ES6+), Fetch API, HTML5, CSS3.
+*   **Data Format:** JSON (JavaScript Object Notation).
 
-## Important Note
+## Installation & Launch
 
-Since this project uses **AJAX (fetch)**, it must be run through a **local web server** (like *Live Server* in VS Code) to avoid CORS policy restrictions when loading local files.
+1.  Ensure you have **Node.js** installed.
+2.  Install the dependencies (if not already):
+    ```bash
+    npm install express
+    ```
+3.  Run the server:
+    ```bash
+    node server.js
+    ```
+4.  Open your browser at **`http://localhost:3000`**.
 
 ## How to Use
 
-1.  Launch the project using a local server.
-2.  The app will display "Загрузка приложения..." (Loading...) for a split second before injecting the home content.
-3.  Click the buttons to swap between the **Landing Page** and the **Recipe List** seamlessly.
+1.  On the Home page, click **"Загрузить рецепты из JSON"** to see the dynamic table generation.
+2.  Click **"Скачать JSON файл"** to test the backend file-serving capability.
+3.  Navigate through the SPA to view the main recipe catalog.
