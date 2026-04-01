@@ -45,6 +45,49 @@
         document.addEventListener('DOMContentLoaded', () => {
             window.navigateTo('home');
         });
+
+        window.loadJsonData = async function() {
+            const container = document.getElementById('json-table-container');
+            
+            try {
+                const response = await fetch('data.json');
+                if (!response.ok) throw new Error('Файл данных не найден');
+                
+                const data = await response.json();
+                
+                let tableHtml = `
+                    <h3>Дополнительные рецепты</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Блюдо (Ключ)</th>
+                                <th>Описание (Значение)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                `;
+
+                for (let key in data) {
+                    tableHtml += `
+                        <tr>
+                            <td><strong>${key}</strong></td>
+                            <td>${data[key]}</td>
+                        </tr>
+                    `;
+                }
+
+                tableHtml += '</tbody></table>';
+                
+                container.innerHTML = tableHtml;
+
+            } catch (err) {
+                container.innerHTML = `<p style="color:red">Ошибка: ${err.message}</p>`;
+                console.error(err);
+            }
+        };
+
+
+    // Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
     </script>
 </body>
 </html>

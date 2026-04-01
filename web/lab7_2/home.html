@@ -1,4 +1,12 @@
 <h1>Сборник кулинарных рецептов</h1>
         <p>Добро пожаловать! Это приложение поможет вам хранить любимые рецепты и быстро находить нужные инструкции по приготовлению блюд.</p>
-        <p>Нажмите кнопку ниже, чтобы открыть список доступных рецептов.</p>
-        <button class="btn" onclick="navigateTo('recipes')">Открыть книгу рецептов</button>
+        <button class="btn" onclick="loadJsonData()">Загрузить рецепты из JSON</button>
+        <div id="json-table-container"></div>
+        <br><br>
+        <button class="btn" onclick="navigateTo('recipes')">Перейти к основному каталогу</button>
+
+        <hr
+        <p>Хотите сохранить рецепты себе?</p>
+        <a href="/download-data" class="btn" style="background: #28a745; text-decoration: none;">
+        Скачать JSON файл
+        </a>
