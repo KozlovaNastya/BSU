@@ -7,3 +7,4 @@
 - [lab6](https://github.com/KozlovaNastya/BSU/tree/main/web/lab6): Dynamic Recursive Menu & Persistent Storage System
 - [lab7_1](https://github.com/KozlovaNastya/BSU/tree/main/web/lab7_1): Single Page Applicationa
 - [lab7_2](https://github.com/KozlovaNastya/BSU/tree/main/web/lab7_2): AJAX Powered SPA
+- [lab8](https://github.com/KozlovaNastya/BSU/tree/main/web/lab8): Express CRUD Application
