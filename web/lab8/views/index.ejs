@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Кулинарная книга</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <span>Мои рецепты</span>
+        <span class="about">О нас</span>
+    </header>
+
+    <main class="container">
+        <button class="hero-btn" onclick="showAddForm()">
+            Добавить рецепт
+        </button>
+
+        <div id="recipe-list">
+            <% recipes.forEach(recipe => { %>
+                <div class="card" id="item-<%= recipe.id %>">
+                    <div class="card-actions">
+                        <span class="edit-icon" onclick="editItem('<%= recipe.id %>')">✏️</span>
+                        <span class="delete-icon" onclick="deleteItem('<%= recipe.id %>')">❌</span>
+                    </div>
+                    <div class="card-content">
+                        <%= recipe.name %>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </main>
+
+    <script src="/app.js"></script>
+</body>
+</html>
