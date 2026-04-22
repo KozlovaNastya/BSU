@@ -1,4 +1,4 @@
-# Laboratory Work 3: Multithreading and Synchronization
+# Multithreading and Synchronization
 
 ## Project Description
 This project demonstrates thread synchronization in Windows using the C++ programming language. The application manages a set of "marker" threads that compete for resources within a shared integer array.
