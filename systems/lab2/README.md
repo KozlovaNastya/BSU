@@ -1,4 +1,4 @@
-# Multithreading in Windows (Threads & Synchronization)
+# Multithreading in Windows
 This is an educational project demonstrating basic multithreading concepts using the Windows API. The application performs parallel data processing (finding extrema and calculating averages) with simulated delays.
 # System Components
 - *Main Thread* — The orchestrator. It handles user input (array size and elements), creates worker threads, synchronizes their completion, and performs the final array modification.
