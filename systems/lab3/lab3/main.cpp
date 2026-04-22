@@ -73,6 +73,10 @@ void printArray(int* arr, int size) {
 int main() {
     int n;
     cout << "Enter array size: "; cin >> n;
+    if (n <= 0) {
+        std::cout << "Incorrect array size" << std::endl;
+        return 0;
+    }
     int* arr = new int[n]();
 
     int m;
@@ -122,7 +126,9 @@ int main() {
 
         hStoppedEvents[target - 1] = CreateEvent(NULL, TRUE, TRUE, NULL);
 
+        EnterCriticalSection(&cs);
         printArray(arr, n);
+        LeaveCriticalSection(&cs);
 
         for (int i = 0; i < m; i++) {
             if (threadActive[i]) SetEvent(tData[i].hContinueEvent);
