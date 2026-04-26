@@ -8,3 +8,4 @@
 - [lab7_1](https://github.com/KozlovaNastya/BSU/tree/main/web/lab7_1): Single Page Applicationa
 - [lab7_2](https://github.com/KozlovaNastya/BSU/tree/main/web/lab7_2): AJAX Powered SPA
 - [lab8](https://github.com/KozlovaNastya/BSU/tree/main/web/lab8): Express CRUD Application
+- [lab8_extra](https://github.com/KozlovaNastya/BSU/tree/main/web/lab8_extra): Pagination
