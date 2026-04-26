@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Кулинарная книга</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <span>Мои рецепты</span>
+        <span class="about">О нас</span>
+    </header>
+
+    <main class="container">
+        <button class="hero-btn" onclick="showAddForm()">
+            Добавить рецепт
+        </button>
+ 
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Поиск рецепта..." oninput="applyFilters()">
+            
+            <select id="sortSelect" onchange="applyFilters()">
+                <option value="">Без сортировки</option>
+                <option value="asc">Название (А-Я)</option>
+                <option value="desc">Название (Я-А)</option>
+            </select>
+        </div>
+
+        <div id="pagination" class="pagination-container"></div>
+
+        <div id="recipe-list"></div>
+    </main>
+
+    <script src="/app.js"></script>
+</body>
+</html>
