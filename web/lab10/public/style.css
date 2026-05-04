@@ -1,0 +1,42 @@
+body { font-family: sans-serif; margin: 0; background-color: #fff6f6; }
+.navbar {
+    background-color: #b74b19; color: white;
+    padding: 15px 20px; display: flex; justify-content: space-between;
+}
+.container { text-align: center; padding: 20px; }
+.hero-btn {
+    background-color: #b74b19; color: white; border: none;
+    padding: 10px 20px; border-radius: 5px; margin-bottom: 30px; cursor: pointer;
+}
+.card {
+    background: rgb(253, 231, 231); border: 2px solid #b74b19; border-radius: 8px;
+    width: 60%; margin: 15px auto; padding: 20px;
+    position: relative; font-size: 1.2rem;
+}
+.card-actions { position: absolute; right: 10px; top: 10px; }
+.edit-icon, .delete-icon { cursor: pointer; margin-left: 10px; }
+button{ width: 200px; font-size: large;}
+
+.controls {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pagination-container {
+    margin: 15px 0;
+}
+
+.pagination-container button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid #b74b19;
+    background: rgb(255, 250, 241);
+}
+
+.pagination-container button.active {
+    background: #b74b19;
+    color: rgb(255, 250, 241);
+}
