@@ -9,5 +9,5 @@
 - [lab7_2](https://github.com/KozlovaNastya/BSU/tree/main/web/lab7_2): AJAX Powered SPA
 - [lab8](https://github.com/KozlovaNastya/BSU/tree/main/web/lab8): Express CRUD Application
 - [lab8_extra](https://github.com/KozlovaNastya/BSU/tree/main/web/lab8_extra): Pagination
-- [lab9](): Socket.IO
+- [lab9](https://github.com/KozlovaNastya/web_lab9): Socket.IO
 - [lab10](https://github.com/KozlovaNastya/BSU/tree/main/web/lab10): Webpack & RxJS
