@@ -6,3 +6,4 @@
 - [lab4](https://github.com/KozlovaNastya/BSU/tree/main/methods/lab4): Nonlinear Equation Solving
 - [lab5](https://github.com/KozlovaNastya/BSU/tree/main/methods/lab5): Function Interpolation
 - [lab6](https://github.com/KozlovaNastya/BSU/tree/main/methods/lab6): Bezier Curves
+- [lab7](https://github.com/KozlovaNastya/BSU/tree/main/methods/lab7): Numerical Integration Methods
