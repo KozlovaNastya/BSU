@@ -4,3 +4,4 @@
 - [lab2](https://github.com/KozlovaNastya/BSU/tree/main/systems/lab2): Thread Creation in Windows
 - [lab3](https://github.com/KozlovaNastya/BSU/tree/main/systems/lab3): Multithreading and Synchronization
 - [lab4](https://github.com/KozlovaNastya/BSU/tree/main/systems/lab4): Interprocess Communication (IPC) via Binary File
+- [lab5](https://github.com/KozlovaNastya/BSU/tree/main/systems/lab5):  Process Synchronization via Named Pipes
