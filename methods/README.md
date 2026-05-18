@@ -7,3 +7,4 @@
 - [lab5](https://github.com/KozlovaNastya/BSU/tree/main/methods/lab5): Function Interpolation
 - [lab6](https://github.com/KozlovaNastya/BSU/tree/main/methods/lab6): Bezier Curves
 - [lab7](https://github.com/KozlovaNastya/BSU/tree/main/methods/lab7): Numerical Integration Methods
+- [lab8](https://github.com/KozlovaNastya/BSU/tree/main/methods/lab8): Numerical solution of the Cauchy problem for ODE
