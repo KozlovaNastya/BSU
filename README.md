@@ -13,7 +13,7 @@ This repository is for labs on various subjects at the Belarusian State Universi
 - [Calculation Methods](https://github.com/KozlovaNastya/BSU/tree/main/methods) - `C++`
 - [Web Application Development](https://github.com/KozlovaNastya/BSU/tree/main/web) - `HTML` `CSS` `JavaScript`
 - [Operating Systems](https://github.com/KozlovaNastya/BSU/tree/main/systems) - `C++`
-- [Mobile Development for IOS](https://github.com/KozlovaNastya/BSU/tree/main/ios) -`C`
+- [Mobile Development for IOS](https://github.com/KozlovaNastya/BSU/tree/main/ios) -`C` `Swift`
 
 ---
 
