@@ -10,4 +10,5 @@
 - [lab8](https://github.com/KozlovaNastya/BSU/tree/main/web/lab8): Express CRUD Application
 - [lab8_extra](https://github.com/KozlovaNastya/BSU/tree/main/web/lab8_extra): Pagination
 - [lab9](https://github.com/KozlovaNastya/web_lab9): Socket.IO
+- [lab9_1](https://github.com/KozlovaNastya/web_lab9_1): Implemented Chat Story
 - [lab10](https://github.com/KozlovaNastya/BSU/tree/main/web/lab10): Webpack & RxJS
