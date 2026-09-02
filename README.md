@@ -49,6 +49,7 @@ This repository is for labs on various subjects at the Belarusian State Universi
 - [Mobile Development for IOS](https://github.com/KozlovaNastya/BSU/tree/main/ios)
 </details>
 
+<details>
 <summary>semester 5</summary>
 
 - [Web Application Development](https://github.com/KozlovaNastya/BSU/tree/main/web)
