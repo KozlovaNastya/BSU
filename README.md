@@ -49,8 +49,7 @@ This repository is for labs on various subjects at the Belarusian State Universi
 - [Mobile Development for IOS](https://github.com/KozlovaNastya/BSU/tree/main/ios)
 </details>
 
----
+<summary>semester 5</summary>
 
-## Additional resources
-- [FAMCS "Плюшки"](https://drive.google.com/drive/folders/1E-C97FkYpyokqisJagy1oZDOAcn1ly9g)
-- [fpmi-stud](https://drive.google.com/drive/folders/1fHpN0onSWIi1IBraPW2ExMSHVeRX997I)
+- [Web Application Development](https://github.com/KozlovaNastya/BSU/tree/main/web)
+</details>
