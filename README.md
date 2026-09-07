@@ -1,8 +1,6 @@
 # BSU
 This repository is for labs on various subjects at the Belarusian State University.
 
----
-
 ### Subjects
 - [Fundamentals and Methodologies of Programming](https://github.com/KozlovaNastya/BSU/tree/main/fundamentals) - `C++`
 - [Cross-platform Application Development](https://github.com/KozlovaNastya/BSU/tree/main/cross-platform) - `C++` `Qt`
@@ -15,8 +13,6 @@ This repository is for labs on various subjects at the Belarusian State Universi
 - [Operating Systems](https://github.com/KozlovaNastya/BSU/tree/main/systems) - `C++`
 - [Mobile Development for IOS](https://github.com/KozlovaNastya/BSU/tree/main/ios) -`C` `Swift`
 - [Data analysis and visualization technologies](https://github.com/KozlovaNastya/BSU/tree/main/analysis) -`Python` `Anaconda` `GoogleColab`
-
----
 
 ### Subjects by semesters
 <details>
