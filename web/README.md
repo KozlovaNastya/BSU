@@ -1,4 +1,5 @@
 # Web Application Development
+### Part 1
 - [lab1](https://github.com/KozlovaNastya/BSU/tree/main/web/lab1): First Steps in Web Development
 - [lab2](https://github.com/KozlovaNastya/BSU/tree/main/web/lab2): Table & Block Layout
 - [lab3](https://github.com/KozlovaNastya/BSU/tree/main/web/lab3): Culinary Collection & Dish Management System
@@ -12,3 +13,6 @@
 - [lab9](https://github.com/KozlovaNastya/web_lab9): Socket.IO
 - [lab9_1](https://github.com/KozlovaNastya/web_lab9_1): Implemented Chat Story
 - [lab10](https://github.com/KozlovaNastya/BSU/tree/main/web/lab10): Webpack & RxJS
+
+### Part 2
+- [lab11](https://github.com/KozlovaNastya/BSU/tree/main/web/lab11): React Search Lab
