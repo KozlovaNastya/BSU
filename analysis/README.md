@@ -1,7 +1,7 @@
 # Data analysis and visualization technologies
 
 - [lab1](https://github.com/KozlovaNastya/BSU/tree/main/analysis/lab1): Setting up a development environment and managing virtual environments
-- [lab2](https://github.com/KozlovaNastya/BSU/tree/main/analysis/lab2):
+- [lab2](https://github.com/KozlovaNastya/BSU/tree/main/analysis/lab2): Exploratory data analysis
 - [lab3](https://github.com/KozlovaNastya/BSU/tree/main/analysis/lab3):
 - [lab4](https://github.com/KozlovaNastya/BSU/tree/main/analysis/lab4):
 - [lab5](https://github.com/KozlovaNastya/BSU/tree/main/analysis/lab5):
