@@ -1,0 +1,60 @@
+﻿@model List<lab1.Models.Player>
+@{
+    ViewData["Title"] = "Список игроков";
+}
+
+<h2>Игроки</h2>
+
+<form method="get" class="row g-2 mb-3">
+    <div class="col-auto">
+        <input type="text" name="position" value="@ViewBag.Position" class="form-control" placeholder="Позиция (RW, D, LW...)" />
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary">Фильтр по позиции (параметр)</button>
+        <a asp-action="Index" class="btn btn-secondary">Сбросить</a>
+    </div>
+</form>
+
+<p>
+    <a asp-action="Create" class="btn btn-success">Добавить игрока</a>
+</p>
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>№</th>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Позиция</th>
+            <th>Дата рожд.</th>
+            <th>Вес</th>
+            <th>Рост</th>
+            <th>Город</th>
+            <th>Штат</th>
+            <th>Действия</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.PlayerId</td>
+                <td>@p.Jersey</td>
+                <td>@p.Fname</td>
+                <td>@p.Sname</td>
+                <td>@p.Position</td>
+                <td>@p.Birthday?.ToString("yyyy-MM-dd")</td>
+                <td>@p.Weight</td>
+                <td>@p.Height</td>
+                <td>@p.BirthCity</td>
+                <td>@p.BirthState</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@p.PlayerId">Детали</a> |
+                    <a asp-action="Edit" asp-route-id="@p.PlayerId">Изменить</a> |
+                    <a asp-action="Delete" asp-route-id="@p.PlayerId">Удалить</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

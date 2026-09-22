@@ -1,0 +1,26 @@
+﻿@model lab1.Models.Player
+@{
+    ViewData["Title"] = "Игрок";
+}
+
+<h2>@Model.Fname @Model.Sname</h2>
+<dl class="row">
+    <dt class="col-sm-3">ID</dt>
+    <dd class="col-sm-9">@Model.PlayerId</dd>
+    <dt class="col-sm-3">Номер</dt>
+    <dd class="col-sm-9">@Model.Jersey</dd>
+    <dt class="col-sm-3">Позиция</dt>
+    <dd class="col-sm-9">@Model.Position</dd>
+    <dt class="col-sm-3">Дата рождения</dt>
+    <dd class="col-sm-9">@Model.Birthday?.ToString("yyyy-MM-dd")</dd>
+    <dt class="col-sm-3">Вес</dt>
+    <dd class="col-sm-9">@Model.Weight</dd>
+    <dt class="col-sm-3">Рост</dt>
+    <dd class="col-sm-9">@Model.Height</dd>
+    <dt class="col-sm-3">Город</dt>
+    <dd class="col-sm-9">@Model.BirthCity</dd>
+    <dt class="col-sm-3">Штат/Страна</dt>
+    <dd class="col-sm-9">@Model.BirthState</dd>
+</dl>
+<a asp-action="Edit" asp-route-id="@Model.PlayerId" class="btn btn-primary">Изменить</a>
+<a asp-action="Index" class="btn btn-secondary">К списку</a>

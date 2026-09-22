@@ -1,0 +1,19 @@
+﻿@model lab1.Models.Player
+@{
+    ViewData["Title"] = "Удалить игрока";
+}
+
+<h2>Удалить игрока?</h2>
+<dl class="row">
+    <dt class="col-sm-3">ID</dt>
+    <dd class="col-sm-9">@Model.PlayerId</dd>
+    <dt class="col-sm-3">Имя</dt>
+    <dd class="col-sm-9">@Model.Fname @Model.Sname</dd>
+    <dt class="col-sm-3">Позиция</dt>
+    <dd class="col-sm-9">@Model.Position</dd>
+</dl>
+<form asp-action="Delete" method="post">
+    <input type="hidden" name="id" value="@Model.PlayerId" />
+    <button type="submit" class="btn btn-danger">Удалить</button>
+    <a asp-action="Index" class="btn btn-secondary">Отмена</a>
+</form>

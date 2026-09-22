@@ -1,0 +1,20 @@
+﻿@model lab1.Models.Player
+@{
+    ViewData["Title"] = "Добавить игрока";
+}
+
+<h2>Добавить игрока</h2>
+<form asp-action="Create" method="post">
+    <div class="mb-2"><label asp-for="PlayerId"></label><input asp-for="PlayerId" class="form-control" /><span asp-validation-for="PlayerId" class="text-danger"></span></div>
+    <div class="mb-2"><label asp-for="Jersey"></label><input asp-for="Jersey" class="form-control" /></div>
+    <div class="mb-2"><label asp-for="Fname"></label><input asp-for="Fname" class="form-control" /></div>
+    <div class="mb-2"><label asp-for="Sname"></label><input asp-for="Sname" class="form-control" /></div>
+    <div class="mb-2"><label asp-for="Position"></label><input asp-for="Position" class="form-control" /></div>
+    <div class="mb-2"><label asp-for="Birthday"></label><input asp-for="Birthday" type="date" class="form-control" /></div>
+    <div class="mb-2"><label asp-for="Weight"></label><input asp-for="Weight" class="form-control" /></div>
+    <div class="mb-2"><label asp-for="Height"></label><input asp-for="Height" class="form-control" /></div>
+    <div class="mb-2"><label asp-for="BirthCity"></label><input asp-for="BirthCity" class="form-control" /></div>
+    <div class="mb-2"><label asp-for="BirthState"></label><input asp-for="BirthState" class="form-control" /></div>
+    <button type="submit" class="btn btn-primary">Сохранить</button>
+    <a asp-action="Index" class="btn btn-secondary">Назад</a>
+</form>
