@@ -1,6 +1,6 @@
 # Angular Zoo App
 
-Lab work #2: Angular, TypeScript, Firebase.
+Angular, TypeScript, Firebase.
 
 ## Features
 - SPA with Angular Router
