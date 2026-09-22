@@ -17,3 +17,4 @@
 ### Part 2
 - [lab11](https://github.com/KozlovaNastya/BSU/tree/main/web/lab11): React Search Lab
 - [lab11_1](https://github.com/KozlovaNastya/BSU/tree/main/web/lab11_1): SPA и React routing
+- [lab12](https://github.com/KozlovaNastya/BSU/tree/main/web/lab12): Angular
