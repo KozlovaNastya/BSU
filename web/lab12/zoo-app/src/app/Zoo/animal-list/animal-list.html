@@ -1,0 +1,25 @@
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h3>Список животных</h3>
+  <!--<a routerLink="/zoo/new" class="btn btn-success">Добавить животное</a>-->
+</div>
+
+<ul class="list-group">
+  <li
+    *ngFor="let animal of animals"
+    class="list-group-item d-flex justify-content-between align-items-center"
+  >
+    <span
+      [routerLink]="['/zoo', animal.id]"
+      style="cursor: pointer"
+      class="flex-grow-1"
+    >
+      <strong>{{ animal.nikname }}</strong> — {{ animal.animalkind }}
+    </span>
+    <!--<a
+      [routerLink]="['/zoo/edit', animal.id]"
+      class="btn btn-sm btn-outline-primary"
+    >
+      Изменить
+    </a>-->
+  </li>
+</ul>

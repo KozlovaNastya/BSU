@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/zoo">Zoo App</a>
+    <div class="navbar-nav">
+      <a class="nav-link" routerLink="/zoo">Главная</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-4">
+  <div class="jumbotron bg-light p-5 rounded">
+    <h1 class="display-4">Зоопарк</h1>
+    <p class="lead">
+      Информационная система для просмотра и управления списком животных.
+    </p>
+    <hr class="my-4" />
+    <p>Выберите животное из списка, чтобы посмотреть подробности.</p>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>
