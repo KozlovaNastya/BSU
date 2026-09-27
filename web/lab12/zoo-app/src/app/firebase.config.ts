@@ -5,7 +5,7 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 export const firebaseConfig = {
-  apiKey: "AIzaSyC-zc0rl5d25YUXgdncXpZF9oYfkuMtSgQ",
+  apiKey: "",
   authDomain: "lab2-3c005.firebaseapp.com",
   projectId: "lab2-3c005",
   storageBucket: "lab2-3c005.firebasestorage.app",
