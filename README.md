@@ -14,7 +14,7 @@ This repository is for labs on various subjects at the Belarusian State Universi
 - [Mobile Development for IOS](https://github.com/KozlovaNastya/BSU/tree/main/ios) -`C` `Swift`
 - [Data Analysis and Visualization Technologies](https://github.com/KozlovaNastya/BSU/tree/main/analysis) -`Python` `Anaconda` `GoogleColab`
 - [Service-oriented Software Systems](https://github.com/KozlovaNastya/BSU/tree/main/service-oriented) - `C#` `.NET`
-- [Mathematical Modeling](https://github.com/KozlovaNastya/BSU/tree/main/math-methods) - `C#`
+- [Mathematical Modeling](https://github.com/KozlovaNastya/BSU/tree/main/math-modeling) - `C#`
 
 ### Subjects by semesters
 <details>
@@ -54,5 +54,5 @@ This repository is for labs on various subjects at the Belarusian State Universi
 - [Web Application Development](https://github.com/KozlovaNastya/BSU/tree/main/web)
 - [Data analysis and visualization technologies](https://github.com/KozlovaNastya/BSU/tree/main/analysis)
 - [Service-oriented Software Systems](https://github.com/KozlovaNastya/BSU/tree/main/service-oriented)
-- [Mathematical Modeling](https://github.com/KozlovaNastya/BSU/tree/main/math-methods)
+- [Mathematical Modeling](https://github.com/KozlovaNastya/BSU/tree/main/math-modeling)
 </details>
