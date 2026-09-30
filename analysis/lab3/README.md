@@ -40,7 +40,3 @@ The target variable `rent` was log-transformed (`log1p`) to reduce skewness. Met
 - scikit-learn
 - matplotlib, seaborn
 - kagglehub
-
-## 📌 Conclusion
-
-The lab confirms that model quality depends on the number and informativeness of features. Log-transforming the target improves R² in log-scale, but the metrics in the original scale are naturally lower due to the non-linear inverse transformation.
