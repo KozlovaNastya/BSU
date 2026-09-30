@@ -2,7 +2,7 @@
 
 - [lab1](https://github.com/KozlovaNastya/BSU/tree/main/analysis/lab1): Setting up a development environment and managing virtual environments
 - [lab2](https://github.com/KozlovaNastya/BSU/tree/main/analysis/lab2): Exploratory data analysis
-- [lab3](https://github.com/KozlovaNastya/BSU/tree/main/analysis/lab3):
+- [lab3](https://github.com/KozlovaNastya/BSU/tree/main/analysis/lab3): Linear Regression Lab
 - [lab4](https://github.com/KozlovaNastya/BSU/tree/main/analysis/lab4):
 - [lab5](https://github.com/KozlovaNastya/BSU/tree/main/analysis/lab5):
 - [lab6](https://github.com/KozlovaNastya/BSU/tree/main/analysis/lab6):
