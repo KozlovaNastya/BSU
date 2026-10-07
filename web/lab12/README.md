@@ -47,3 +47,6 @@ src/app/
 3. Create collection animals with documents
 
 4. Copy `firebase.config.example.ts` → `firebase.config.ts` and fill in your data
+
+## Access to WebSite
+Open this [link](https://lab2-3c005.web.app/zoo) to reach the website 
