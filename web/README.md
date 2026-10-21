@@ -18,3 +18,5 @@
 - [lab11](https://github.com/KozlovaNastya/BSU/tree/main/web/lab11): React Search Lab
 - [lab11_1](https://github.com/KozlovaNastya/BSU/tree/main/web/lab11_1): SPA и React routing
 - [lab12](https://github.com/KozlovaNastya/BSU/tree/main/web/lab12): Angular
+- [lab13](https://github.com/KozlovaNastya/BSU/tree/main/web/lab13): JDBC, DAO & SQLite
+- [lab13_1](https://github.com/KozlovaNastya/BSU/tree/main/web/lab13_1): Connection Pools & Logging
