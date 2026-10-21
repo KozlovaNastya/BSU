@@ -1,0 +1,62 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcService";
+
+package player;
+
+// Сервис для работы с игроками
+service PlayerService {
+  rpc GetAll       (EmptyRequest)       returns (PlayerList);
+  rpc GetByPosition(PositionRequest)    returns (PlayerList);
+  rpc GetById      (IdRequest)          returns (PlayerReply);
+  rpc Insert       (PlayerRequest)      returns (EmptyReply);
+  rpc Update       (PlayerRequest)      returns (EmptyReply);
+  rpc Delete       (IdRequest)          returns (EmptyReply);
+}
+
+// Пустой запрос / пустой ответ
+message EmptyRequest {}
+message EmptyReply {}
+
+// Запрос по ID
+message IdRequest {
+  string id = 1;
+}
+
+// Запрос по позиции
+message PositionRequest {
+  string position = 1;
+}
+
+// Данные игрока
+message PlayerReply {
+  string playerId   = 1;
+  int32  jersey     = 2;
+  string fname      = 3;
+  string sname      = 4;
+  string position   = 5;
+  string birthday   = 6;  // дата как строка ISO-8601 (yyyy-MM-dd)
+  int32  weight     = 7;
+  int32  height     = 8;
+  string birthCity  = 9;
+  string birthState = 10;
+}
+
+// Список игроков
+message PlayerList {
+  repeated PlayerReply players = 1;
+}
+
+// Запрос на добавление/изменение
+message PlayerRequest {
+  string playerId   = 1;
+  int32  jersey     = 2;
+  string fname      = 3;
+  string sname      = 4;
+  string position   = 5;
+  string birthday   = 6;
+  int32  weight     = 7;
+  int32  height     = 8;
+  string birthCity  = 9;
+  string birthState = 10;
+}
