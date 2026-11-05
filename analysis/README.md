@@ -4,7 +4,7 @@
 - [lab2](https://github.com/KozlovaNastya/BSU/tree/main/analysis/lab2): Exploratory data analysis
 - [lab3](https://github.com/KozlovaNastya/BSU/tree/main/analysis/lab3): Linear Regression Lab
 - [lab4](https://github.com/KozlovaNastya/BSU/tree/main/analysis/lab4): Classification Lab
-- [lab5](https://github.com/KozlovaNastya/BSU/tree/main/analysis/lab5):
+- [lab5](https://github.com/KozlovaNastya/BSU/tree/main/analysis/lab5): Ensemble Methods
 - [lab6](https://github.com/KozlovaNastya/BSU/tree/main/analysis/lab6):
 - [lab7](https://github.com/KozlovaNastya/BSU/tree/main/analysis/lab7):
 - [lab8](https://github.com/KozlovaNastya/BSU/tree/main/analysis/lab8):
