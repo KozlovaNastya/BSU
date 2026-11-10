@@ -1,0 +1,7 @@
+<!DOCTYPE html><html xmlns:th="http://www.thymeleaf.org"><head th:replace="~{style :: styles}"><title>Keepers</title></head><body>
+<div th:replace="~{fragments :: header('Keeper directory', 'The people looking after the zoo residents')}"></div>
+<main><div class="page-head"><div><h2>Keepers</h2><p class="muted">Contact details for the zoo team.</p></div></div>
+<div th:if="${message != null}" class="message" th:text="${message}">Message</div>
+<div class="table-wrap"><table><thead><tr><th>#</th><th>Name</th><th>Phone</th></tr></thead><tbody><tr th:each="keeper : ${keepers}"><td th:text="${keeper.id}">1</td><td><strong th:text="${keeper.name}">Keeper name</strong></td><td th:text="${keeper.phone != null ? keeper.phone : '—'}">—</td></tr><tr th:if="${#lists.isEmpty(keepers)}"><td colspan="3" class="empty">No keepers found.</td></tr></tbody></table></div>
+<section class="panel form-panel"><h3>Add a keeper</h3><form class="form-grid" method="post" th:action="@{/keepers/create}"><div class="field"><label>Name</label><input name="name" required></div><div class="field"><label>Phone</label><input name="phone" type="tel"></div><button type="submit">Add keeper</button></form></section>
+<div class="footer"><span>Keeper records are loaded through KeeperDao.</span><span th:text="${#lists.size(keepers)} + ' records'">0 records</span></div></main></body></html>

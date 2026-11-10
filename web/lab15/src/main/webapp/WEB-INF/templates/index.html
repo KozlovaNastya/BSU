@@ -1,0 +1,6 @@
+<!DOCTYPE html><html xmlns:th="http://www.thymeleaf.org"><head th:replace="~{style :: styles}"><title>Zoo Manager</title></head><body>
+<div th:replace="~{fragments :: header('Welcome to the zoo', 'A simple workspace for animals, keepers and everyday care')}"></div>
+<main><div class="page-head"><div><h2>At a glance</h2><p class="muted">Everything you need to keep the zoo running smoothly.</p></div></div>
+<div class="stats"><div class="stat"><span>REGISTERED ANIMALS</span><strong th:text="${animalCount}">0</strong></div><div class="stat"><span>KEEPERS</span><strong th:text="${keeperCount}">0</strong></div><div class="stat"><span>YOUR SESSION</span><strong th:text="${sessionRequestCount}">1</strong><span>requests made</span></div></div>
+<div class="panel"><h3>Quick navigation</h3><p class="muted">Browse the animal collection, review care activities, check the keeper directory or manage assigned tasks.</p><div class="actions"><a class="button" th:href="@{/animals}">Explore animals</a><a class="button secondary" th:href="@{/tasks}">Manage tasks</a></div></div>
+<div class="footer"><span>Zoo Management System · Java Servlet + Thymeleaf</span><span>Laboratory work №15</span></div></main></body></html>

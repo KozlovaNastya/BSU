@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<header th:fragment="header(title, subtitle)">
+  <div class="topline"><a class="brand" th:href="@{/}">ZOO<span>MANAGER</span></a><span class="tag">WEB APPLICATION · LAB 15</span></div>
+  <div class="hero"><div><p class="eyebrow">ZOO MANAGEMENT SYSTEM</p><h1 th:text="${title}">Dashboard</h1><p class="subtitle" th:text="${subtitle}">Manage animals and daily care</p></div>
+    <div class="session-card"><span class="session-label">YOUR VISITS</span><strong th:text="${visitCount}">1</strong><small>Last session: <span th:text="${lastSession}">First visit</span></small><small>Requests in this session: <span th:text="${sessionRequestCount}">1</span></small></div>
+  </div>
+  <nav><a th:href="@{/}">Overview</a><a th:href="@{/animals}">Animals</a><a th:href="@{/cares}">Care activities</a><a th:href="@{/keepers}">Keepers</a><a th:href="@{/tasks}">Tasks</a></nav>
+</header>
+</body>
+</html>
