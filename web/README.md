@@ -20,3 +20,4 @@
 - [lab12](https://github.com/KozlovaNastya/BSU/tree/main/web/lab12): Angular
 - [lab13](https://github.com/KozlovaNastya/BSU/tree/main/web/lab13): JDBC, DAO & SQLite
 - [lab13_1](https://github.com/KozlovaNastya/BSU/tree/main/web/lab13_1): Connection Pools & Logging
+- [lab14](https://github.com/KozlovaNastya/BSU/tree/main/web/lab14): Java Persistence API
