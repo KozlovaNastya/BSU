@@ -22,3 +22,4 @@
 - [lab13_1](https://github.com/KozlovaNastya/BSU/tree/main/web/lab13_1): Connection Pools & Logging
 - [lab14](https://github.com/KozlovaNastya/BSU/tree/main/web/lab14): Java Persistence API
 - [lab14_1](https://github.com/KozlovaNastya/BSU/tree/main/web/lab14_1): JPA Criteria API
+- [lab15](https://github.com/KozlovaNastya/BSU/tree/main/web/lab15): Java Servlet
