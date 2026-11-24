@@ -1,4 +1,4 @@
-# Lab 7: Dimensionality Reduction
+# Dimensionality Reduction
 
 A study of linear and non-linear dimensionality reduction techniques — **PCA**, **t-SNE**, and **UMAP** — applied to two high-dimensional datasets. The lab also validates how compression affects downstream model quality and training time.
 
