@@ -6,5 +6,5 @@
 - [lab4](https://github.com/KozlovaNastya/BSU/tree/main/analysis/lab4): Classification Lab
 - [lab5](https://github.com/KozlovaNastya/BSU/tree/main/analysis/lab5): Ensemble Methods
 - [lab6](https://github.com/KozlovaNastya/BSU/tree/main/analysis/lab6): Clustering Analysis
-- [lab7](https://github.com/KozlovaNastya/BSU/tree/main/analysis/lab7):
+- [lab7](https://github.com/KozlovaNastya/BSU/tree/main/analysis/lab7): Dimensionality Reduction
 - [lab8](https://github.com/KozlovaNastya/BSU/tree/main/analysis/lab8):
